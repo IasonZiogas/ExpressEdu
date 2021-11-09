@@ -1,7 +1,39 @@
 
 
-body {
-    background-color:lightslategray;
-  }
+/* .category {
+    background-color:#2b6777;
+    border-radius:10%;
+    padding: 20px;
+    margin:10px
+  } */
 
-  
+body header{
+  background-color: orange;
+  padding-bottom:5px;
+}
+
+body footer {
+  background-color:orange;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+body {
+  background-color:white;
+}
+
+.menu_image{
+  margin:01em;
+}
+
+.menu{
+  margin:01em;
+}
+
+.category{
+  margin:01em;
+}
+
+.info{
+  margin:01em;
+}
