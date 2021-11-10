@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <img img src="images/natural_sciences.jpg" alt="some stock image" style="width:170px;height:170px;float:right">
+<body>    
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Φυσικές Επιστήμες
+        </title>
+        <link rel="stylesheet" href="../Exercise2/style.css"  type="text/css">
+    </head>
+<header>
+    <img class="menu_image" img src="images/natural_sciences.png" alt="some stock image" style="width:170px;height:170px;float:right">
+    <div class="menu">
     <h1>ExpressEdu </h1>
     <h3>Φυσικές Επιστήμες</h3>
-    <div id=N_S_menu>
         <nav>
-            <th><a href="index.html">Αρχική</a></th> |
-            <a href="#Physics">Φυσική</a> |
-            <a href="#Biology">Βιολογία</a> |
-            <a href="#Chemistry">Χημεία</a> |
+            <a href="index.html">Αρχική</a> |
+            <a href="Computer_Science.html">Επιστήμη Υπολογιστών</a> |
+            <a href="Literature.html">Ανθρωπιστικές Επιστήμες</a>  |
+            <a href="About_Us.html"> About Us</a>
         </nav>
         <h4>Επέλεξε ενα αντικέιμενο για να μεταβείς στην ανάλογη ενότητα</h4>
+        <nav>
+            <a href="index.html">Αρχική</a> >> Φυσικές Επιστήμες
+        </nav>
     </div>
-</head>
-<body>
-<div id="Physics">
+</header>
+<main>
+<article class="category">
     <h3>
         Φυσική
     </h3>
@@ -54,9 +65,9 @@
     <form action="Physics_Courses.html">
         <input type="submit" value="Δες ολα τα διαθέσιμα μαθήματα!" />
     </form>
-</div>
+</article>
 
-<div id="Biology">
+<article class="category">
     <h3>
         Βιολογία
     </h3>
@@ -76,9 +87,12 @@
           στο ομώνυμο έργο του Biologie το 1802.Στη σύγχρονη ελληνική γραμματεία 
           πρωτοαναφέρθηκε από τον Δημήτριο Μαυροκορδάτο το 1836.
     </p>
-</div>
+    <form action="Biology_Courses.html">
+        <input type="submit" value="Δες ολα τα διαθέσιμα μαθήματα!" />
+    </form>
+</article>
 
-<div id="Χημεία">
+<article class="category">
     <h3>
         Χημεία
     </h3>
@@ -105,8 +119,21 @@
          και το πως συλλέγονται αποδεικτικά στοιχεία DNA λ.χ. 
          σε μια σκηνή εγκλήματος (εγκληματολογία).
     </p>
-</div>
-
-
+    <form action="Chemistry_Courses.html">
+        <input type="submit" value="Δες ολα τα διαθέσιμα μαθήματα!" />
+    </form>
+</article>
+</main>
+    <footer>
+        <div class="info">
+        <h4>
+            Follow us on social media!      |    <a href="Contact_Us.html">Contact Us!</a> |
+        </h4>
+        <ul>
+            <li><img img src="images/facebook.png" alt="Facebook Logo" style="width:20px;height:20px;"> <a href="https://www.facebook.com/">Facebook</a></li>
+            <li><img img src="images/twitter.png" alt="Twitter Logo" style="width:20px;height:20px;"> <a href="https://www.twitter.com/">Twitter</a></li>
+        </ul>
+        </div>
+    </footer>
 </body>
 </html>
