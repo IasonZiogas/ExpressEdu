@@ -7,9 +7,13 @@
     margin:10px
   } */
 
+/*Testing different fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap');
+
 body header{
   background-color: orange;
   padding-bottom:5px;
+  padding-top:5px;
 }
 
 body footer {
@@ -19,7 +23,10 @@ body footer {
 }
 
 body {
+  /*New font added*/
+  font-family: 'Azeret Mono', monospace;
   background-color:white;
+  margin:0em;
 }
 
 .menu_image{
@@ -35,5 +42,13 @@ body {
 }
 
 .info{
+  margin:01em;
+}
+
+nav a:hover{
+  background-color: orangered;
+}
+
+.course{
   margin:01em;
 }
