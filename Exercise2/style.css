@@ -37,6 +37,7 @@ body {
 }
 
 .menu{
+  display:grid;
   margin:01em;
 }
 
@@ -52,6 +53,38 @@ a:hover{
   background-color: orangered;
 }
 
+a:link{
+  color:black;
+}
+
+a:visited{
+  color:purple;
+}
+
 .course{
   margin:01em;
+}
+
+/* Testing Flex box */
+/* grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* Testing Grid */
+.recommendation{
+  display:grid;
+  grid-template-columns: 170px 170px 170px 170px;
+  grid-column-gap:70px;
+  justify-content: center;
+  margin:01em;
+}
+
+.recommendation a:hover {
+  background-color:white;
+}
+
+.title{
+  text-align:center;
 }
