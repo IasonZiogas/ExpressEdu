@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        ExpressEdu
+    </title>
+    <link rel="icon" type="image/x-icon" href="../Exercise1/images/favicon.ico">
+    <link rel="stylesheet" href="../Exercise2/style.css"  type="text/css">
+</head>
 <body>
+    <Header>
+        <div class="menu">
+        <h1>ExpressEdu</h1>
+        <a href="index.html"> Αρχική </a>
+        </div>
+    </Header>
 
-<Header>
-    <h1>ExpressEdu</h1>
-    <a href="index.html"> Αρχική </a>
-</Header>
+    <main>
+    <div class="course">
+    <h3>Συμπληρώστε την φόρμα με το email σας και το ανάλογο μήνυμα που θελετε να παραλάβουμε.</h3>
 
-<h3>Συμπληρώστε την φόρμα με το email σας και το ανάλογο μήνυμα που θελετε να παραλάβουμε.</h3>
-
-<form>
-    <label for="email">Enter your email:</label><br>
-    <input type="email" id="Custoemr_Email" name="Customer_Email"><br>
-    <label for="Customer_Comment">Your Comment:</label><br>
-    <textarea id="Customer_Comment" name="Customer_Comment" rows="10"> </textarea>
-    <br>
-    <input type="submit" value="Submit">
-</form>
-
-
+    <form>
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="Customer_Email" name="Customer_Email"><br>
+        <label for="Customer_Comment">Your Comment:</label><br>
+        <textarea id="Customer_Comment" name="Customer_Comment" rows="10"> </textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    </main>
 </body>
 </html>
