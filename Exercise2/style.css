@@ -1,12 +1,4 @@
 
-
-/* .category {
-    background-color:#2b6777;
-    border-radius:10%;
-    padding: 20px;
-    margin:10px
-  } */
-
 /*Testing different fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap');
 
@@ -74,15 +66,29 @@ a:visited{
 } */
 
 /* Testing Grid */
-.recommendation{
+/* .recommendation{
+  /* min-width: 600px;
   display:grid;
-  grid-template-columns: 170px 170px 170px 170px;
+  grid-template-columns: minmax(120px,170px) minmax(120px,170px) minmax(120px,170px) minmax(120px,170px);
   grid-column-gap:70px;
   justify-content: center;
   margin:01em;
+} */ 
+
+/* Testing flex */
+.front_page_recommendation{
+  display:flex;
+  flex-wrap:wrap;
+  flex-basis:100%;
+  justify-content: center;
 }
 
-.recommendation a:hover {
+.front_page_recommendation .recommendation{
+  width: 170px;
+  margin:01em;
+}
+
+.front_page_recommendation a:hover {
   background-color:white;
 }
 
