@@ -11,13 +11,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap');
 
 body header{
-  background-color: orange;
-  padding-bottom:5px;
+  background-color:var(--main_color);
+  padding-bottom:10px;
   padding-top:5px;
+
 }
 
 body footer {
-  background-color:orange;
+  background-color:var(--main_color);
   padding-top:5px;
   padding-bottom:5px;
 }
@@ -37,7 +38,7 @@ body {
 }
 
 .menu{
-  display:grid;
+  /* display:grid; */
   margin:01em;
 }
 
@@ -87,4 +88,9 @@ a:visited{
 
 .title{
   text-align:center;
+}
+
+/* Variables bonus */
+:root{
+  --main_color:orange;
 }
