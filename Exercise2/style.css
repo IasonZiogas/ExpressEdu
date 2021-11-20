@@ -55,10 +55,9 @@ a:visited{
   color:purple;
 }
 
-/* Using a flex to dispaly all the categories of a specific field */
+/* Using a grid to dispaly all the categories of a specific field */
 main .category_collection{
-  display:flex;
-  flex-wrap:wrap;
+  display:grid;
 }
 
 /* adding margin around each "course" to create a visually pleasing result */
