@@ -19,6 +19,7 @@ body {
   /*New font added*/
   font-family: 'Azeret Mono', monospace;
   background-color:white;
+  /* Gia na ginei borderless to site */
   margin:0em;
 }
 
@@ -54,18 +55,19 @@ a:visited{
   color:purple;
 }
 
+/* Using a flex to dispaly all the categories of a specific field */
+main .category_collection{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+/* adding margin around each "course" to create a visually pleasing result */
 .course{
   margin:01em;
 }
 
-/* Testing Flex box */
-/* grid-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+/*----------------------------------------------------Testing Grid ----------------------------------------------------*/
 
-/* Testing Grid */
 /* .recommendation{
   /* min-width: 600px;
   display:grid;
@@ -80,7 +82,7 @@ a:visited{
   display:flex;
   flex-wrap:wrap;
   flex-basis:100%;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .front_page_recommendation .recommendation{
