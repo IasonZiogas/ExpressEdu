@@ -54,6 +54,12 @@ body {
   margin:01em;
 }
 
+/* Assigning the image of each course to the correct place */
+.course img{
+  float:left;
+  margin:0 1em;
+}
+
 .category{
   margin:01em;
 }
@@ -72,11 +78,6 @@ a:link{
 
 a:visited{
   color:purple;
-}
-
-/* Using a grid to dispaly all the categories of a specific field */
-main .category_collection{
-  display:grid;
 }
 
 /* adding margin around each "course" to create a visually pleasing result */
@@ -119,4 +120,38 @@ main .category_collection{
 /* Variables bonus */
 :root{
   --main_color:orange;
+}
+
+/* Using a grid to dispaly all the categories of a specific field */
+.category_collection{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap:70px;
+  margin:01em;
+}
+
+/*---------------------------------------------------- Customizing the main content(Άσκηση 4 - Responsive Design) ----------------------------------------------------*/
+
+/* Creating a margin between each column of the grid*/
+/* .category_collection .category{
+  margin:01em;
+} */
+
+/*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
+
+/* Media query for 2 columns for a tablet screen */
+@media screen and (max-width: 992px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:40px;
+  }
+}
+
+/* media query for a single column for a smartphone screen */
+@media screen and (max-width: 600px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto;
+  }
 }
