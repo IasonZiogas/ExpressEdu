@@ -206,6 +206,9 @@ a:visited{
 
 .logo{
   margin:01em;
+  width:150px;
+  height:150px;
+  float:left;
 }
 
 .form{
