@@ -6,17 +6,22 @@
         ExpressEdu
     </title>
     <link rel="icon" type="image/x-icon" href="../Exercise1/images/favicon.ico">
-    <link rel="stylesheet" href="../Exercise2/style.css"  type="text/css">
+    <link rel="stylesheet" href="../Exercise5/style.css"  type="text/css">
 </head>
 <body>
     <header>
         <div class ="menu">
+        <img class="logo" img src="../Exercise1/images/logo.png" alt="ExpressEdu logo" width="150px" height="150px" style="float:left;">
+        <br>
         <h1>ExpressEdu</h1>
             <nav>
                 <a href="Computer_Science.html">Επιστήμη Υπολογιστών</a> |
                 <a href="Literature.html">Ανθρωπιστικές Επιστήμες</a> |
                 <a href="Natural_Sciences.html"> Φυσικές Επιστήμες</a> |
-                <a href="About_Us.html"> About Us</a>
+                <a href="About_Us.html"> About Us</a> |
+                <button class="sign_up_button">
+                    <a href="Sign_Up.html"> Εγγραφή χρήστη</a>
+                </button>
             </nav>
         </div>
     </header>
@@ -32,7 +37,10 @@
                     Cryptocurrency
                 </h4>
                 <a href="https://www.edx.org/course/bitcoin-and-cryptocurrencies" target="_blank">
-                <img img src="../Exercise1/images/bitcoin.jpg" alt="bitcoin" width="170px" height="170px">
+                <picture>
+                    <source media="(max-width:600px)" srcset="../Exercise4/images_resized/bitcoin.png">
+                    <img img src="../Exercise1/images/bitcoin.png" alt="bitcoin">
+                </picture>
                 </a>
                 <p>
                     Learn the fundamentals of this new and exciting technology that is blockchain
@@ -43,7 +51,10 @@
                     Python
                 </h4>
                 <a href="https://www.edx.org/course/programming-for-everybody-getting-started-with-pyt" target="_blank">
-                <img  img src="../Exercise1/images/python.png" alt="python logo" width="170px" height="170px">
+                <picture>
+                    <source media="(max-width:600px)" srcset="../Exercise4/images_resized/python.png">
+                    <img  img src="../Exercise1/images/python.png" alt="python logo">
+                </picture>
                 </a>
                 <p>
                     Learn the fundamentals of one of the most usefull programming languages
@@ -54,7 +65,10 @@
                     Critical Thinking
                 </h4>
                 <a href="https://www.edx.org/course/philosophy-and-critical-thinking" target="_blank">
-                <img img src="../Exercise1/images/critical_thinking.webp" alt="critical thinking" width="170px" height="170px">
+                <picture>
+                    <source media="(max-width:600px)" srcset="../Exercise4/images_resized/critical_thinking.png">
+                    <img img src="../Exercise1/images/critical_thinking.png" alt="critical thinking">
+                </picture>
                 </a>
                 <p>
                     Learn how to improve your decision making skills.
@@ -65,7 +79,10 @@
                     Astrophysics
                 </h4>
                 <a href="https://www.edx.org/search?q=astrophysics&tab=course" target="_blank">
-                <img img src="../Exercise1/images/astro.jpg" alt="bitcoin" width="170px" height="170px">
+                <picture>
+                    <source media="(max-width:600px)" srcset="../Exercise4/images_resized/astro.png">
+                    <img img src="../Exercise1/images/astro.png" alt="bitcoin">
+                </picture>
                 </a>
                 <p>
                     Learn about the wonders of physics on the universe

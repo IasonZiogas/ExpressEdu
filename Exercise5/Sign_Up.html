@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Εγγραφή χρήστη
+        </title>
+        <link rel="icon" type="image/x-icon" href="../Exercise1/images/favicon.ico">
+        <link rel="stylesheet" href="../Exercise5/style.css"  type="text/css">
+        <script src="jsstyle.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <div class ="menu">
+                <h1>ExpressEdu</h1>
+                    <nav>
+                        <a href="index.html"> Αρχική </a>
+                    </nav>
+            </div>
+        </header>
+        <main>
+            <h4 class="course">Παρακαλώ πολύ συμπληρώστε τα στοιχεία σας</h2>
+            <form class="form">
+                <fieldset>
+                    <legend>Προσωπικά στοιχεία</legend>
+                    <label for="first_name">
+                        <span> Όνομα: </span>
+                        <br>
+                        <input type="text" id="first_name'" name="first_name" autocomplete="on">
+                    </label>
+                    <br>
+                    <label for="last_name"> 
+                        <span>Επώνυμο:</span>
+                        <br>
+                        <input type="text" id="last_name'" name="last_name" autocomplete="on">
+                    </label>
+                    <br>
+                    <label for="user_birthday">
+                        <span>Ημερομηνία γέννησης:</span>
+                        <br>
+                        <input type="date" id="user_birthday" name="user_birthday">
+                    </label>
+                    <br>
+                    <label for="user_email"> 
+                        <span>E-mail:</span>
+                        <br>
+                        <input type="email" id="user_email" name="user_email">
+                    </label>
+                    <br>
+                    <label for="user_phone">
+                        <span>Κινητό τηλέφωνο</span>
+                        <br>
+                        <input type="tel" id="user_phone" name="user_phone" pattern="[0-9]{10}">
+                    </label>
+                    <br>
+                    <label for="user_country">
+                        <span>Χώρα</span>
+                        <br>
+                        <select id="user_country" name="user_country">
+                            <option value="Afganistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="American Samoa">American Samoa</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Anguilla">Anguilla</option>
+                            <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Aruba">Aruba</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bermuda">Bermuda</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bonaire">Bonaire</option>
+                            <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Canary Islands">Canary Islands</option>
+                            <option value="Cape Verde">Cape Verde</option>
+                            <option value="Cayman Islands">Cayman Islands</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Channel Islands">Channel Islands</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Christmas Island">Christmas Island</option>
+                            <option value="Cocos Island">Cocos Island</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo">Congo</option>
+                            <option value="Cook Islands">Cook Islands</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cote DIvoire">Cote DIvoire</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Curaco">Curacao</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="East Timor">East Timor</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Falkland Islands">Falkland Islands</option>
+                            <option value="Faroe Islands">Faroe Islands</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="French Guiana">French Guiana</option>
+                            <option value="French Polynesia">French Polynesia</option>
+                            <option value="French Southern Ter">French Southern Ter</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Gibraltar">Gibraltar</option>
+                            <option value="Great Britain">Great Britain</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Greenland">Greenland</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guadeloupe">Guadeloupe</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="India">India</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Isle of Man">Isle of Man</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Korea North">Korea North</option>
+                            <option value="Korea Sout">Korea South</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Macau">Macau</option>
+                            <option value="Macedonia">Macedonia</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Martinique">Martinique</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mayotte">Mayotte</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Midway Islands">Midway Islands</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Nambia">Nambia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherland Antilles">Netherland Antilles</option>
+                            <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                            <option value="Nevis">Nevis</option>
+                            <option value="New Caledonia">New Caledonia</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Niue">Niue</option>
+                            <option value="Norfolk Island">Norfolk Island</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau Island">Palau Island</option>
+                            <option value="Palestine">Palestine</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Phillipines">Philippines</option>
+                            <option value="Pitcairn Island">Pitcairn Island</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Republic of Montenegro">Republic of Montenegro</option>
+                            <option value="Republic of Serbia">Republic of Serbia</option>
+                            <option value="Reunion">Reunion</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="St Barthelemy">St Barthelemy</option>
+                            <option value="St Eustatius">St Eustatius</option>
+                            <option value="St Helena">St Helena</option>
+                            <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                            <option value="St Lucia">St Lucia</option>
+                            <option value="St Maarten">St Maarten</option>
+                            <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                            <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                            <option value="Saipan">Saipan</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="Samoa American">Samoa American</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Swaziland">Swaziland</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Tahiti">Tahiti</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tokelau">Tokelau</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Erimates">United Arab Emirates</option>
+                            <option value="United States of America">United States of America</option>
+                            <option value="Uraguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Vatican City State">Vatican City State</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                            <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                            <option value="Wake Island">Wake Island</option>
+                            <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zaire">Zaire</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Στοιχεία κάρτας</legend>
+                    <label for="card_number">
+                        <span>Αριθμός κάρτας: </span>
+                        <br>
+                        <input type="text" id="card_number" name="card_number" placeholder="1234-1234-1234-1234" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                    </label>
+                    <br>
+                    <label for="card_holder">
+                        <span>Ον/μο Ιδιοκτήτη: </span>
+                        <br>
+                        <input type="text" id="card_holder" name="card_holder" placeholder="Giorgos Z. Gewrgiou">
+                    </label>
+                    <br>
+                    <label for="card_cvv">
+                        <span>CVV: </span>
+                        <br>
+                        <input type="text" id="card_cvv" name="card_cvv" pattern="[0-9]{3}">
+                    </label>
+                    <br>
+                    <label for="card_adress">
+                        <span>Διέυθυνση χρέωσης: </span>
+                        <br>
+                        <input type="text" id="card_adress" name="card_adress">
+                    </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Στοιχεία λογαριασμού</legend>
+                    <label for="username">
+                        <span>Όνομα χρήστη: </span>
+                        <br>
+                        <input type="text" id="username" name="username">
+                    </label>
+                    <br>
+                    <label for="user_password">
+                        <span>Κωδικός: </span>
+                        <br>
+                        <input type="password" id="user_password" name="user_password">
+                    </label>
+                    <br>
+                    <label for="user_password_config">
+                        <span>Επιβεβαίωση κωδικού: </span>
+                        <br>
+                        <input type="password" id="user_password_config" name="user_password_config">
+                    </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Ερωτηματολόγιο</legend>
+                    <label for="user_education">
+                        <span>Επίπεδο σπουδών: </span>
+                        <br>
+                        <select onclick=enablegradyear() id="user_education" name="user_education">
+                            <option value="primary">Δημοτικό</option>
+                            <option value="secondary">Γυμνάσιο</option>
+                            <option value="high_school">Λύκειο</option>
+                            <option value="University">Πανεπιστήμιο</option>
+                            <option value="no_answer">Δεν απαντώ</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label id="graduation_year" for="graduation_year" hidden>
+                        <span>Έτος αποφοίτησης: </span>
+                        <br>
+                        <input id="gradyear" type="number" min="1920" max="2021" step="1" value="2021">
+                        <br>
+                    </label>
+                    <label for="user_sex">
+                        <span>Φύλο: </span>
+                        <br>
+                        <select id="user_sex" name="user_sex">
+                            <option value="male">Άρρεν</option>
+                            <option value="female">Θήλυ</option>
+                        </select>
+                        <br>
+                    </label>
+
+                    <form for="user_preference">
+                        <span>Ποιόν κλάδο προτιμάτε: </span>
+                        <br>
+                        <input onclick=enablecorrectform(this.value) type="radio" id="Computer_Science" name="user_preference" value="Computer_Science">
+                        <label for="Computer_Science">Επιστήμη υπολογιστών</label>
+                        <br>
+                        <input onclick=enablecorrectform(this.value) type="radio" id="Literature" name="user_preference" value="Literature">
+                        <label for="Literature">Ανθρωπιστικές επιστήμες</label>
+                        <br>
+                        <input  onclick=enablecorrectform(this.value) type="radio" id="Natural_Sciences" name="user_preference" value="Natural_Sciences">
+                        <label for="Natural_Sciences">Φυσικές επιστήμες</label>
+                    </form>
+                    
+                    <br>
+
+                    <form id="Computer_Science_form" hidden>
+                        <label for="user_favorite_language">
+                            <span>Αγαπημένη γλώσσα προγραμματισμού: </span>
+                            <br>
+                            <input list="programming_languages" id="user_fav_language" name="user_fav_language" autocomplete="on">
+                            <datalist id="programming_languages">
+                                <option value="Python">
+                                <option value="Java">
+                                <option value="C++">
+                                <option value="C#">
+                                <option value="Javascript">                       
+                            </datalist>
+                        </label>
+                        <br>
+                        <label for="user_experience">
+                            <span>Πόσο έμπειρος είστε σε αυτήν την γλώσσα; </span>
+                            <br>
+                            <input type="range" id="user_experience_counter" name="user_experience" value="user_experience_counter">
+                        </label>
+                        <br>
+                        <label for="user_field_of_study">
+                            <span>Σπουδάζεται πάνω σε αυτόν τον κλάδο; </span>
+                            <br>
+                            <input type="radio" id="correct_field_of_study" name="user_field_of_study" value="yes">
+                            <label for="Yes">Ναι</label>
+                            <br>
+                            <input type="radio" id="incorrect_field_of_study" name="user_field_of_study" value="No">
+                            <label for="No">Οχι</label>
+                        </label>
+                    </form>
+                </fieldset>
+
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        <footer>
+            <div class = "info">
+            <h4>
+                Follow us on social media!      |    <a href="Contact_Us.html">Contact Us!</a> |
+            </h4>
+            <ul>
+                <li><img img src="../Exercise1/images/facebook.png" alt="Facebook Logo" width="20px" height="20px"> <a href="https://www.facebook.com/">Facebook</a></li>
+                <li><img img src="../Exercise1/images/twitter.png" alt="Twitter Logo" width="20px" height="20px"> <a href="https://www.twitter.com/">Twitter</a></li>
+            </ul>
+            </div>
+        </footer>
+    </body>
+</html>

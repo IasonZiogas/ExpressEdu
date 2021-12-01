@@ -31,6 +31,9 @@ body footer {
   background-color:var(--main_color);
   padding-top:5px;
   padding-bottom:5px;
+  margin-top:120px;
+  width:100%;
+  bottom:0;
 }
 
 body {
@@ -39,7 +42,11 @@ body {
   background-color:white;
   /* Gia na ginei borderless to site */
   margin:0em;
+  /* adding a grid to avoid the footer situation */
+  display:grid;
+  grid-template-columns: auto;
 }
+
 
 .menu_image{
   margin:01em;
@@ -98,14 +105,14 @@ a:visited{
 
 /* Testing flex */
 .front_page_recommendation{
-  display:flex;
-  flex-wrap:wrap;
-  flex-basis:100%;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap:40px;
   justify-content: space-evenly;
 }
 
 .front_page_recommendation .recommendation{
-  width: 170px;
+  width:220px;
   margin:01em;
 }
 
@@ -146,6 +153,12 @@ a:visited{
     grid-template-columns: auto auto;
     grid-column-gap:40px;
   }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+  }
 }
 
 /* media query for a single column for a smartphone screen */
@@ -154,4 +167,48 @@ a:visited{
     display:grid;
     grid-template-columns: auto;
   }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+  }
+
+  /* Changing the width of the recommendation class in order for the content to spread evenly */
+  .front_page_recommendation .recommendation{
+    width:130px;
+    margin:01em;
+  }
+}
+
+
+/* Askhsh 5 */
+.sign_up_button{
+  border: 4px solid orangered;
+  background-color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.sign_up_button:hover{
+  background-color: orangered;
+}
+
+.form{
+  margin:01em;
+}
+
+
+.logo{
+  margin:01em;
+}
+
+.form{
+  display: grid;
+  grid-template-columns: 100%;
 }
