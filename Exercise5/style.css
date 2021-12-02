@@ -215,3 +215,22 @@ a:visited{
   display: grid;
   grid-template-columns: 100%;
 }
+
+/* Creating space between each question and changing the font size */
+.spacing{
+  margin-bottom: 01em;
+  font-size: 1.1em;
+}
+
+/* Changing the font size of the fieldset title */
+legend{
+  font-size: 1.7em;
+}
+
+/* Designing the submit button */
+#submit_button{
+  float:right;
+  margin-right:10em;
+  height:50px;
+  width:100px;
+}
