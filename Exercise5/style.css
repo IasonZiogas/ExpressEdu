@@ -21,17 +21,19 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Changing the color and the padding of the header */
 body header{
   background-color:var(--main_color);
   padding-bottom:10px;
   padding-top:5px;
+  width:100%;
 }
 
+/* Changing the color,the padding and the width of the footer */
 body footer {
   background-color:var(--main_color);
   padding-top:5px;
   padding-bottom:5px;
-  margin-top:120px;
   width:100%;
   bottom:0;
 }
@@ -42,12 +44,18 @@ body {
   background-color:white;
   /* Gia na ginei borderless to site */
   margin:0em;
-  /* adding a grid to avoid the footer situation */
-  display:grid;
-  grid-template-columns: auto;
+  /* adding a flex to position the footer always at the bottom of the page */
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  min-height: 100vh;
 }
 
+main{
+  flex:1;
+}
 
+/* Customizing each categories and subject image on the header of the page */
 .menu_image{
   margin:01em;
   width:170px ;
@@ -67,14 +75,7 @@ body {
   margin:0 1em;
 }
 
-.category{
-  margin:01em;
-}
-
-.info{
-  margin:01em;
-}
-
+/* Changing the color of all the links when you hover over them */
 a:hover{
   background-color: orangered;
 }
@@ -83,6 +84,7 @@ a:link{
   color:black;
 }
 
+/* When the link is visited the color changes */
 a:visited{
   color:purple;
 }
@@ -91,6 +93,15 @@ a:visited{
 .course{
   margin:01em;
 }
+
+.category{
+  margin:01em;
+}
+
+.info{
+  margin:01em;
+}
+
 
 /*----------------------------------------------------Testing Grid ----------------------------------------------------*/
 
@@ -124,7 +135,7 @@ a:visited{
   text-align:center;
 }
 
-/* Variables bonus */
+/* Variable for the main color */
 :root{
   --main_color:orange;
 }
@@ -231,6 +242,8 @@ legend{
 #submit_button{
   float:right;
   margin-right:10em;
+  margin-bottom:01em;
   height:50px;
   width:100px;
 }
+
