@@ -103,15 +103,6 @@ a:visited{
 
 /*----------------------------------------------------Testing Grid ----------------------------------------------------*/
 
-/* .recommendation{
-  /* min-width: 600px;
-  display:grid;
-  grid-template-columns: minmax(120px,170px) minmax(120px,170px) minmax(120px,170px) minmax(120px,170px);
-  grid-column-gap:70px;
-  justify-content: center;
-  margin:01em;
-} */ 
-
 /* Testing flex */
 .front_page_recommendation{
   display:grid;
@@ -148,11 +139,6 @@ a:visited{
 
 /*---------------------------------------------------- Customizing the main content(Άσκηση 4 - Responsive Design) ----------------------------------------------------*/
 
-/* Creating a margin between each column of the grid*/
-/* .category_collection .category{
-  margin:01em;
-} */
-
 /*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
 
 /* Media query for 2 columns for a tablet screen */
@@ -167,6 +153,11 @@ a:visited{
     display:grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
+  }
+
+  .course_image{
+    width:170px;
+    height:170px;
   }
 }
 
@@ -187,6 +178,25 @@ a:visited{
   .front_page_recommendation .recommendation{
     width:130px;
     margin:01em;
+  }
+
+  /* Changing the logo dimensions */
+  .logo{
+    margin:01em;
+    width:100px;
+    height:100px;
+    float:left;
+  }
+
+  /* making images disappear when viewed by phone */
+  .menu_image{
+    display:none;
+  }
+
+  /*changing dimensions of each courses image */
+  .course_image{
+    width:130px;
+    height:130px;
   }
 }
 
