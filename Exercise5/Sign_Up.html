@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             Εγγραφή χρήστη
         </title>
@@ -36,14 +38,14 @@
                         <label for="first_name">
                             <span> Όνομα: </span>
                             <br>
-                            <input type="text" id="first_name'" name="first_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Νίκος" required>
+                            <input type="text" id="first_name'" name="first_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Νίκος" required />
                         </label>
                     </div>
                     <div class="spacing">
                         <label for="last_name"> 
                             <span>Επώνυμο:</span>
                             <br>
-                            <input type="text" id="last_name'" name="last_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Παππάς" required>
+                            <input type="text" id="last_name'" name="last_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Παππάς" required />
                         </label>
                     </div>
                     <div class="spacing">
@@ -428,7 +430,7 @@
                         </label>
                     </div>
                     <div class="spacing">
-                        <form for="user_preference">
+                        <div for="user_preference">
                             <span>Ποιόν κλάδο προτιμάτε: </span>
                             <br>
                             <input onclick=enableCorrectForm(this.value) type="radio" id="Computer_Science" name="user_preference" value="Computer_Science">
@@ -439,10 +441,10 @@
                             <br>
                             <input  onclick=enableCorrectForm(this.value) type="radio" id="Natural_Sciences" name="user_preference" value="Natural_Sciences">
                             <label for="Natural_Sciences">Φυσικές επιστήμες</label>
-                        </form>
+                        </div>
                     </div>
                     <!-- Creating the form for when the user picks computer science -->
-                    <form id="Computer_Science_form" hidden> 
+                    <div id="Computer_Science_div" hidden> 
                         <div class="spacing">
                             <label for="user_favorite_language">
                                 <span>Αγαπημένη γλώσσα προγραμματισμού: </span>
@@ -496,9 +498,9 @@
                                 </datalist>
                             </label>
                         </div>
-                    </form>
+                    </div>
                     <!-- Creating the form for when the user picks literature -->
-                    <form id="Literature_form" hidden>
+                    <div id="Literature_div" hidden>
                         <div class="spacing">
                             <label for="user_field_of_study">
                                 <span>Σπουδάζεται πάνω σε αυτόν τον κλάδο; </span>
@@ -550,9 +552,9 @@
                                 <input type="range" id="user_reading" name="user_reading_preference" value="user_reading_preference">
                             </label>
                         </div>
-                    </form>
+                    </div>
                     <!-- Creating the form for when the user picks natural sciences-->
-                    <form id="Natural_Sciences_form" hidden>
+                    <div id="Natural_Sciences_div" hidden>
                         <div class="spacing">
                             <label for="user_reason_for_field">
                                 <details>
@@ -585,11 +587,12 @@
                                 </datalist>
                             </label>
                         </div>
-                    </form>
+                    </div>
                 </fieldset>
-
                 <br>
-                <input id="submit_button" type="submit" value="Submit">
+                <div>
+                    <input id="submit_button" type="submit" value="Submit">
+                </div>
             </form>
         </main>
         <footer>
