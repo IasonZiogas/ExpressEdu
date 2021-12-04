@@ -36,35 +36,36 @@
                         <label for="first_name">
                             <span> Όνομα: </span>
                             <br>
-                            <input type="text" id="first_name'" name="first_name" autocomplete="on">
+                            <input type="text" id="first_name'" name="first_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Νίκος" required>
                         </label>
                     </div>
                     <div class="spacing">
                         <label for="last_name"> 
                             <span>Επώνυμο:</span>
                             <br>
-                            <input type="text" id="last_name'" name="last_name" autocomplete="on">
+                            <input type="text" id="last_name'" name="last_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Παππάς" required>
                         </label>
                     </div>
                     <div class="spacing">
                         <label for="user_birthday">
                             <span>Ημερομηνία γέννησης:</span>
                             <br>
-                            <input type="date" id="user_birthday" name="user_birthday">
+                            <input type="date" id="user_birthday" name="user_birthday" min = "1911-01-01" max="2020-12-31" required >
+                            <span class="error" id="age_error"></span>
                         </label>
                     </div>
                     <div class="spacing">
                         <label for="user_email"> 
                             <span>E-mail:</span>
                             <br>
-                            <input type="email" id="user_email" name="user_email">
+                            <input type="email" id="user_email" name="user_email"  required>
                         </label>
                     </div>
                     <div class="spacing">
                         <label for="user_phone">
                             <span>Κινητό τηλέφωνο</span>
                             <br>
-                            <input type="tel" id="user_phone" name="user_phone" pattern="[0-9]{10}">
+                            <input type="tel" id="user_phone" name="user_phone" pattern="[0-9]{10}" required>
                         </label>
                     </div>
                     <div class="spacing">
@@ -376,6 +377,7 @@
                             <span>Επιβεβαίωση κωδικού: </span>
                             <br>
                             <input type="password" id="user_password_config" name="user_password_config">
+                            <span class="error" id="password_error"></span>
                         </label>
                     </div>
                 </fieldset>
@@ -387,7 +389,7 @@
                         <label for="user_education">
                             <span>Επίπεδο σπουδών: </span>
                             <br>
-                            <select onclick=enablegradyear() id="user_education" name="user_education">
+                            <select id="user_education" name="user_education">
                                 <option value="primary">Δημοτικό</option>
                                 <option value="secondary">Γυμνάσιο</option>
                                 <option value="high_school">Λύκειο</option>
@@ -429,13 +431,13 @@
                         <form for="user_preference">
                             <span>Ποιόν κλάδο προτιμάτε: </span>
                             <br>
-                            <input onclick=enablecorrectform(this.value) type="radio" id="Computer_Science" name="user_preference" value="Computer_Science">
+                            <input onclick=enableCorrectForm(this.value) type="radio" id="Computer_Science" name="user_preference" value="Computer_Science">
                             <label for="Computer_Science">Επιστήμη υπολογιστών</label>
                             <br>
-                            <input onclick=enablecorrectform(this.value) type="radio" id="Literature" name="user_preference" value="Literature">
+                            <input onclick=enableCorrectForm(this.value) type="radio" id="Literature" name="user_preference" value="Literature">
                             <label for="Literature">Ανθρωπιστικές επιστήμες</label>
                             <br>
-                            <input  onclick=enablecorrectform(this.value) type="radio" id="Natural_Sciences" name="user_preference" value="Natural_Sciences">
+                            <input  onclick=enableCorrectForm(this.value) type="radio" id="Natural_Sciences" name="user_preference" value="Natural_Sciences">
                             <label for="Natural_Sciences">Φυσικές επιστήμες</label>
                         </form>
                     </div>
