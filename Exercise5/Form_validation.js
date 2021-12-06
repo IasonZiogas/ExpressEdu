@@ -22,20 +22,36 @@ function enablegradyear(){
 // Show the correct questions depending of the users favorite field
 function enableCorrectForm(field){
     if(field == "Computer_Science"){
+        // Displaying appropriate form
         document.getElementById("Computer_Science_form").hidden=false;
         document.getElementById("Literature_form").hidden=true;
         document.getElementById("Natural_Sciences_form").hidden=true;
+        // Displaying appropriate sidebar
+        document.getElementById("Computer_Science_sidebar").hidden = false;
+        document.getElementById("Literature_sidebar").hidden = true;
+        document.getElementById("Natural_Sciences_sidebar").hidden = true;
+
     }
     else if(field== "Literature"){
+        // Displaying appropriate form
         document.getElementById("Computer_Science_form").hidden=true;
         document.getElementById("Literature_form").hidden=false;
         document.getElementById("Natural_Sciences_form").hidden=true;
+        // Displaying appropriate sidebar
+        document.getElementById("Computer_Science_sidebar").hidden = true;
+        document.getElementById("Literature_sidebar").hidden = false;
+        document.getElementById("Natural_Sciences_sidebar").hidden = true;
 
     }
     else if(field == "Natural_Sciences"){
+        // Displaying appropriate form
         document.getElementById("Computer_Science_form").hidden=true;
         document.getElementById("Literature_form").hidden=true;
         document.getElementById("Natural_Sciences_form").hidden=false;
+        // Displaying appropriate sidebar
+        document.getElementById("Computer_Science_sidebar").hidden = true;
+        document.getElementById("Literature_sidebar").hidden = true;
+        document.getElementById("Natural_Sciences_sidebar").hidden = false;
     }
 }
 
@@ -57,16 +73,16 @@ function passwordValidation(){
 function ageValidation(){
     let userAge =document.getElementById("user_birthday").value;
     let fields = userAge.split('-');
-    let user_year = fields[0];
-    let user_month = fields[1];
-    let user_day = fields[2];
+    let user_year = parseInt(fields[0]);
+    let user_month = parseInt(fields[1]);
+    let user_day = parseInt(fields[2]);
 
     let error = document.getElementById("age_error");
 
     let current_date = new Date();
-    let current_year = current_date.getFullYear();
-    let current_month = current_date.getMonth();
-    let current_day=current_date.getDay();
+    let current_year = current_date.getUTCFullYear();
+    let current_month = current_date.getUTCMonth() + 1;
+    let current_day=current_date.getUTCDate();
 
     let flag = true;
     if (current_year - user_year < 18){

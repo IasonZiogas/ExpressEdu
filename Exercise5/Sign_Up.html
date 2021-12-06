@@ -9,7 +9,7 @@
         </title>
         <link rel="icon" type="image/x-icon" href="../Exercise1/images/favicon.ico">
         <link rel="stylesheet" href="../Exercise5/style.css"  type="text/css">
-        <script src="jsstyle.js" type="text/javascript"></script>
+        <script src="Form_validation.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -30,541 +30,477 @@
             </div>
         </header>
         <main>
-            <h4 class="course">Παρακαλώ πολύ συμπληρώστε τα στοιχεία σας</h2>
-            <form class="form">
-                <fieldset>
-                    <legend>Προσωπικά στοιχεία</legend>
-                    <div class="spacing">
-                        <label for="first_name">
-                            <span> Όνομα: </span>
-                            <br>
-                            <input type="text" id="first_name'" name="first_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Νίκος" required />
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="last_name"> 
-                            <span>Επώνυμο:</span>
-                            <br>
-                            <input type="text" id="last_name'" name="last_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Παππάς" required />
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="user_birthday">
-                            <span>Ημερομηνία γέννησης:</span>
-                            <br>
-                            <input type="date" id="user_birthday" name="user_birthday" min = "1911-01-01" max="2020-12-31" required >
-                            <span class="error" id="age_error"></span>
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="user_email"> 
-                            <span>E-mail:</span>
-                            <br>
-                            <input type="email" id="user_email" name="user_email"  required>
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="user_phone">
-                            <span>Κινητό τηλέφωνο</span>
-                            <br>
-                            <input type="tel" id="user_phone" name="user_phone" pattern="[0-9]{10}" required>
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="user_country">
-                            <span>Χώρα</span>
-                            <br>
-                            <select id="user_country" name="user_country">
-                                <option value="Afganistan">Afghanistan</option>
-                                <option value="Albania">Albania</option>
-                                <option value="Algeria">Algeria</option>
-                                <option value="American Samoa">American Samoa</option>
-                                <option value="Andorra">Andorra</option>
-                                <option value="Angola">Angola</option>
-                                <option value="Anguilla">Anguilla</option>
-                                <option value="Antigua & Barbuda">Antigua & Barbuda</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Armenia">Armenia</option>
-                                <option value="Aruba">Aruba</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austria">Austria</option>
-                                <option value="Azerbaijan">Azerbaijan</option>
-                                <option value="Bahamas">Bahamas</option>
-                                <option value="Bahrain">Bahrain</option>
-                                <option value="Bangladesh">Bangladesh</option>
-                                <option value="Barbados">Barbados</option>
-                                <option value="Belarus">Belarus</option>
-                                <option value="Belgium">Belgium</option>
-                                <option value="Belize">Belize</option>
-                                <option value="Benin">Benin</option>
-                                <option value="Bermuda">Bermuda</option>
-                                <option value="Bhutan">Bhutan</option>
-                                <option value="Bolivia">Bolivia</option>
-                                <option value="Bonaire">Bonaire</option>
-                                <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
-                                <option value="Botswana">Botswana</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
-                                <option value="Brunei">Brunei</option>
-                                <option value="Bulgaria">Bulgaria</option>
-                                <option value="Burkina Faso">Burkina Faso</option>
-                                <option value="Burundi">Burundi</option>
-                                <option value="Cambodia">Cambodia</option>
-                                <option value="Cameroon">Cameroon</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Canary Islands">Canary Islands</option>
-                                <option value="Cape Verde">Cape Verde</option>
-                                <option value="Cayman Islands">Cayman Islands</option>
-                                <option value="Central African Republic">Central African Republic</option>
-                                <option value="Chad">Chad</option>
-                                <option value="Channel Islands">Channel Islands</option>
-                                <option value="Chile">Chile</option>
-                                <option value="China">China</option>
-                                <option value="Christmas Island">Christmas Island</option>
-                                <option value="Cocos Island">Cocos Island</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Comoros">Comoros</option>
-                                <option value="Congo">Congo</option>
-                                <option value="Cook Islands">Cook Islands</option>
-                                <option value="Costa Rica">Costa Rica</option>
-                                <option value="Cote DIvoire">Cote DIvoire</option>
-                                <option value="Croatia">Croatia</option>
-                                <option value="Cuba">Cuba</option>
-                                <option value="Curaco">Curacao</option>
-                                <option value="Cyprus">Cyprus</option>
-                                <option value="Czech Republic">Czech Republic</option>
-                                <option value="Denmark">Denmark</option>
-                                <option value="Djibouti">Djibouti</option>
-                                <option value="Dominica">Dominica</option>
-                                <option value="Dominican Republic">Dominican Republic</option>
-                                <option value="East Timor">East Timor</option>
-                                <option value="Ecuador">Ecuador</option>
-                                <option value="Egypt">Egypt</option>
-                                <option value="El Salvador">El Salvador</option>
-                                <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                <option value="Eritrea">Eritrea</option>
-                                <option value="Estonia">Estonia</option>
-                                <option value="Ethiopia">Ethiopia</option>
-                                <option value="Falkland Islands">Falkland Islands</option>
-                                <option value="Faroe Islands">Faroe Islands</option>
-                                <option value="Fiji">Fiji</option>
-                                <option value="Finland">Finland</option>
-                                <option value="France">France</option>
-                                <option value="French Guiana">French Guiana</option>
-                                <option value="French Polynesia">French Polynesia</option>
-                                <option value="French Southern Ter">French Southern Ter</option>
-                                <option value="Gabon">Gabon</option>
-                                <option value="Gambia">Gambia</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Germany">Germany</option>
-                                <option value="Ghana">Ghana</option>
-                                <option value="Gibraltar">Gibraltar</option>
-                                <option value="Great Britain">Great Britain</option>
-                                <option value="Greece">Greece</option>
-                                <option value="Greenland">Greenland</option>
-                                <option value="Grenada">Grenada</option>
-                                <option value="Guadeloupe">Guadeloupe</option>
-                                <option value="Guam">Guam</option>
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Guinea">Guinea</option>
-                                <option value="Guyana">Guyana</option>
-                                <option value="Haiti">Haiti</option>
-                                <option value="Hawaii">Hawaii</option>
-                                <option value="Honduras">Honduras</option>
-                                <option value="Hong Kong">Hong Kong</option>
-                                <option value="Hungary">Hungary</option>
-                                <option value="Iceland">Iceland</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="India">India</option>
-                                <option value="Iran">Iran</option>
-                                <option value="Iraq">Iraq</option>
-                                <option value="Ireland">Ireland</option>
-                                <option value="Isle of Man">Isle of Man</option>
-                                <option value="Israel">Israel</option>
-                                <option value="Italy">Italy</option>
-                                <option value="Jamaica">Jamaica</option>
-                                <option value="Japan">Japan</option>
-                                <option value="Jordan">Jordan</option>
-                                <option value="Kazakhstan">Kazakhstan</option>
-                                <option value="Kenya">Kenya</option>
-                                <option value="Kiribati">Kiribati</option>
-                                <option value="Korea North">Korea North</option>
-                                <option value="Korea Sout">Korea South</option>
-                                <option value="Kuwait">Kuwait</option>
-                                <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                <option value="Laos">Laos</option>
-                                <option value="Latvia">Latvia</option>
-                                <option value="Lebanon">Lebanon</option>
-                                <option value="Lesotho">Lesotho</option>
-                                <option value="Liberia">Liberia</option>
-                                <option value="Libya">Libya</option>
-                                <option value="Liechtenstein">Liechtenstein</option>
-                                <option value="Lithuania">Lithuania</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Macau">Macau</option>
-                                <option value="Macedonia">Macedonia</option>
-                                <option value="Madagascar">Madagascar</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Malawi">Malawi</option>
-                                <option value="Maldives">Maldives</option>
-                                <option value="Mali">Mali</option>
-                                <option value="Malta">Malta</option>
-                                <option value="Marshall Islands">Marshall Islands</option>
-                                <option value="Martinique">Martinique</option>
-                                <option value="Mauritania">Mauritania</option>
-                                <option value="Mauritius">Mauritius</option>
-                                <option value="Mayotte">Mayotte</option>
-                                <option value="Mexico">Mexico</option>
-                                <option value="Midway Islands">Midway Islands</option>
-                                <option value="Moldova">Moldova</option>
-                                <option value="Monaco">Monaco</option>
-                                <option value="Mongolia">Mongolia</option>
-                                <option value="Montserrat">Montserrat</option>
-                                <option value="Morocco">Morocco</option>
-                                <option value="Mozambique">Mozambique</option>
-                                <option value="Myanmar">Myanmar</option>
-                                <option value="Nambia">Nambia</option>
-                                <option value="Nauru">Nauru</option>
-                                <option value="Nepal">Nepal</option>
-                                <option value="Netherland Antilles">Netherland Antilles</option>
-                                <option value="Netherlands">Netherlands (Holland, Europe)</option>
-                                <option value="Nevis">Nevis</option>
-                                <option value="New Caledonia">New Caledonia</option>
-                                <option value="New Zealand">New Zealand</option>
-                                <option value="Nicaragua">Nicaragua</option>
-                                <option value="Niger">Niger</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="Niue">Niue</option>
-                                <option value="Norfolk Island">Norfolk Island</option>
-                                <option value="Norway">Norway</option>
-                                <option value="Oman">Oman</option>
-                                <option value="Pakistan">Pakistan</option>
-                                <option value="Palau Island">Palau Island</option>
-                                <option value="Palestine">Palestine</option>
-                                <option value="Panama">Panama</option>
-                                <option value="Papua New Guinea">Papua New Guinea</option>
-                                <option value="Paraguay">Paraguay</option>
-                                <option value="Peru">Peru</option>
-                                <option value="Phillipines">Philippines</option>
-                                <option value="Pitcairn Island">Pitcairn Island</option>
-                                <option value="Poland">Poland</option>
-                                <option value="Portugal">Portugal</option>
-                                <option value="Puerto Rico">Puerto Rico</option>
-                                <option value="Qatar">Qatar</option>
-                                <option value="Republic of Montenegro">Republic of Montenegro</option>
-                                <option value="Republic of Serbia">Republic of Serbia</option>
-                                <option value="Reunion">Reunion</option>
-                                <option value="Romania">Romania</option>
-                                <option value="Russia">Russia</option>
-                                <option value="Rwanda">Rwanda</option>
-                                <option value="St Barthelemy">St Barthelemy</option>
-                                <option value="St Eustatius">St Eustatius</option>
-                                <option value="St Helena">St Helena</option>
-                                <option value="St Kitts-Nevis">St Kitts-Nevis</option>
-                                <option value="St Lucia">St Lucia</option>
-                                <option value="St Maarten">St Maarten</option>
-                                <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
-                                <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
-                                <option value="Saipan">Saipan</option>
-                                <option value="Samoa">Samoa</option>
-                                <option value="Samoa American">Samoa American</option>
-                                <option value="San Marino">San Marino</option>
-                                <option value="Sao Tome & Principe">Sao Tome & Principe</option>
-                                <option value="Saudi Arabia">Saudi Arabia</option>
-                                <option value="Senegal">Senegal</option>
-                                <option value="Seychelles">Seychelles</option>
-                                <option value="Sierra Leone">Sierra Leone</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Slovakia">Slovakia</option>
-                                <option value="Slovenia">Slovenia</option>
-                                <option value="Solomon Islands">Solomon Islands</option>
-                                <option value="Somalia">Somalia</option>
-                                <option value="South Africa">South Africa</option>
-                                <option value="Spain">Spain</option>
-                                <option value="Sri Lanka">Sri Lanka</option>
-                                <option value="Sudan">Sudan</option>
-                                <option value="Suriname">Suriname</option>
-                                <option value="Swaziland">Swaziland</option>
-                                <option value="Sweden">Sweden</option>
-                                <option value="Switzerland">Switzerland</option>
-                                <option value="Syria">Syria</option>
-                                <option value="Tahiti">Tahiti</option>
-                                <option value="Taiwan">Taiwan</option>
-                                <option value="Tajikistan">Tajikistan</option>
-                                <option value="Tanzania">Tanzania</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Togo">Togo</option>
-                                <option value="Tokelau">Tokelau</option>
-                                <option value="Tonga">Tonga</option>
-                                <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-                                <option value="Tunisia">Tunisia</option>
-                                <option value="Turkey">Turkey</option>
-                                <option value="Turkmenistan">Turkmenistan</option>
-                                <option value="Turks & Caicos Is">Turks & Caicos Is</option>
-                                <option value="Tuvalu">Tuvalu</option>
-                                <option value="Uganda">Uganda</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Ukraine">Ukraine</option>
-                                <option value="United Arab Erimates">United Arab Emirates</option>
-                                <option value="United States of America">United States of America</option>
-                                <option value="Uraguay">Uruguay</option>
-                                <option value="Uzbekistan">Uzbekistan</option>
-                                <option value="Vanuatu">Vanuatu</option>
-                                <option value="Vatican City State">Vatican City State</option>
-                                <option value="Venezuela">Venezuela</option>
-                                <option value="Vietnam">Vietnam</option>
-                                <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
-                                <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
-                                <option value="Wake Island">Wake Island</option>
-                                <option value="Wallis & Futana Is">Wallis & Futana Is</option>
-                                <option value="Yemen">Yemen</option>
-                                <option value="Zaire">Zaire</option>
-                                <option value="Zambia">Zambia</option>
-                                <option value="Zimbabwe">Zimbabwe</option>
-                            </select>
-                        </label>
-                    </div>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Στοιχεία κάρτας</legend>
-                    <div class="spacing">
-                        <label for="card_number">
-                            <span>Αριθμός κάρτας: </span>
-                            <br>
-                            <input type="text" id="card_number" name="card_number" placeholder="1234-1234-1234-1234" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="card_holder">
-                            <span>Ον/μο Ιδιοκτήτη: </span>
-                            <br>
-                            <input type="text" id="card_holder" name="card_holder" placeholder="Giorgos Z. Gewrgiou">
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="card_cvv">
-                            <span>CVV: </span>
-                            <br>
-                            <input type="text" id="card_cvv" name="card_cvv" pattern="[0-9]{3}">
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="card_adress">
-                            <span>Διέυθυνση χρέωσης: </span>
-                            <br>
-                            <input type="text" id="card_adress" name="card_adress">
-                        </label>
-                    </div>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Στοιχεία λογαριασμού</legend>
-                    <div class="spacing">
-                        <label for="username">
-                            <span>Όνομα χρήστη: </span>
-                            <br>
-                            <input type="text" id="username" name="username">
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="user_password">
-                            <span>Κωδικός: </span>
-                            <br>
-                            <input type="password" id="user_password" name="user_password">
-                        </label>
-                    </div>
-                    <div class="spacing">
-                        <label for="user_password_config">
-                            <span>Επιβεβαίωση κωδικού: </span>
-                            <br>
-                            <input type="password" id="user_password_config" name="user_password_config">
-                            <span class="error" id="password_error"></span>
-                        </label>
-                    </div>
-                </fieldset>
-                <br>
-                <!--Creating the questionnaire for the user-->
-                <fieldset>
-                    <legend>Ερωτηματολόγιο</legend>
-                    <div class="spacing">
-                        <label for="user_education">
-                            <span>Επίπεδο σπουδών: </span>
-                            <br>
-                            <select id="user_education" name="user_education">
-                                <option value="primary">Δημοτικό</option>
-                                <option value="secondary">Γυμνάσιο</option>
-                                <option value="high_school">Λύκειο</option>
-                                <option value="University">Πανεπιστήμιο</option>
-                                <option value="no_answer">Δεν απαντώ</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="spacing">
-                    <label id="graduation_year" for="graduation_year" hidden>
-                        <span>Έτος αποφοίτησης: </span>
+            <div id="container">
+                <!-- Creating a sidebar that recommends the appropriate courses depending on users preferences -->
+                <div id ="left-container">
+                    <div id="Computer_Science_sidebar">
+                        <h4>Κάποια προτεινόμενα μαθήματα</h4>
+                            <a href="Programming_Courses.html" target="_blank">Μαθήματα προγραμματισμού</a>
+                            <a href="Mobile_app_development_courses.html" target="_blank">Μαθήματα ανάπτυξης εφαρμογών για κινητές συσκευές</a>
+                            <a href="Web_development_courses.html" target="_blank">Μαθήματα Κατασκευής και ανάπτυξης ιστοσελίδων</a>
                         <br>
-                        <input id="gradyear" type="number" min="1920" max="2021" step="1" value="2021">
-                    </label>
+                        <h4>Χρήσιμοι σύνδεσμοι</h4>
+                            <h5 style="text-align: center;">Editors τους οποίους μπορείτε να χρησιμοποιήσετε</h5>
+                                <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">Visual Studio</a>
+                                <a href="https://code.visualstudio.com/Download" target="_blank">Visual Studio Code</a>
+                                <a href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a>
+                            <br>
+                            <h5></h5>
                     </div>
-                    <div class="spacing">
-                        <label for="user_sex">
-                            <span>Φύλο: </span>
+                    <div id="Literature_sidebar" hidden>
+                        <h4>Κάποια προτεινόμενα μαθήματα</h4>
+                            <a href="Mythology_Courses.html" target="_blank">Μυθολογία</a>
+                            <a href="Physics_Courses.html" target="_blank">Φιλοσοφία</a>
+                            <a href="Music_Courses.html" target="_blank">Μουσική</a>
+                        <br>
+                        <h4>Χρήσιμοι σύνδεσμοι</h4>
+                            <h5 style="text-align: center;">Editors τους οποίους μπορείτε να χρησιμοποιήσετε</h5>
+                                <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">Visual Studio</a>
+                                <a href="https://code.visualstudio.com/Download" target="_blank">Visual Studio Code</a>
+                                <a href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a>
                             <br>
-                            <select id="user_sex" name="user_sex">
-                                <option value="male">Άρρεν</option>
-                                <option value="female">Θήλυ</option>
-                                <option value="other">Άλλο</option>
-                            </select>
-                        </label>
                     </div>
-                    <div class="spacing">
-                        <label for="user_hobby">
-                            <span>Έχετε κάποιο χόμπι στον ελεύθερο σας χρόνο; </span>
-                            <br>
-                            <input type="radio" id="user_hobby" name="user_hobby_decision" value="yes">
-                            <label for="Yes">Ναι</label>
-                            <br>
-                            <input type="radio" id="user_no_hobby" name="user_hobby_decision" value="No">
-                            <label for="No">Οχι</label>
-                        </label>
+                    <div id="Natural_Sciences_sidebar" hidden>
+
                     </div>
-                    <div class="spacing">
-                        <div for="user_preference">
-                            <span>Ποιόν κλάδο προτιμάτε: </span>
-                            <br>
-                            <input onclick=enableCorrectForm(this.value) type="radio" id="Computer_Science" name="user_preference" value="Computer_Science">
-                            <label for="Computer_Science">Επιστήμη υπολογιστών</label>
-                            <br>
-                            <input onclick=enableCorrectForm(this.value) type="radio" id="Literature" name="user_preference" value="Literature">
-                            <label for="Literature">Ανθρωπιστικές επιστήμες</label>
-                            <br>
-                            <input  onclick=enableCorrectForm(this.value) type="radio" id="Natural_Sciences" name="user_preference" value="Natural_Sciences">
-                            <label for="Natural_Sciences">Φυσικές επιστήμες</label>
-                        </div>
-                    </div>
-                    <!-- Creating the form for when the user picks computer science -->
-                    <div id="Computer_Science_div" hidden> 
+                </div>
+                <form class="form">
+                    <h4 class="course">Παρακαλώ πολύ συμπληρώστε τα στοιχεία σας</h2>
+                    <fieldset>
+                        <legend>Προσωπικά στοιχεία</legend>
                         <div class="spacing">
-                            <label for="user_favorite_language">
-                                <span>Αγαπημένη γλώσσα προγραμματισμού: </span>
+                            <label for="first_name">
+                                <span> Όνομα: </span>
                                 <br>
-                                <input list="programming_languages" id="user_fav_language" name="user_fav_language" autocomplete="on">
-                                <datalist id="programming_languages">
-                                    <option value="Python">
-                                    <option value="Java">
-                                    <option value="C++">
-                                    <option value="C#">
-                                    <option value="Javascript">                       
-                                </datalist>
+                                <input type="text" id="first_name'" name="first_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Νίκος" required />
                             </label>
                         </div>
                         <div class="spacing">
-                            <label for="user_experience">
-                                <span>Πόσο έμπειρος είστε σε αυτήν την γλώσσα; </span>
+                            <label for="last_name"> 
+                                <span>Επώνυμο:</span>
                                 <br>
-                                <input type="range" id="user_experience_counter" name="user_experience" value="user_experience_counter">
+                                <input type="text" id="last_name'" name="last_name" pattern="[A-Za-z]+" autocomplete="on" placeholder="Παππάς" required />
                             </label>
                         </div>
                         <div class="spacing">
-                        <label for="user_field_of_study">
-                            <span>Σπουδάζεται πάνω σε αυτόν τον κλάδο; </span>
-                            <br>
-                            <input type="radio" id="correct_field_of_study" name="user_field_of_study" value="yes">
-                            <label for="Yes">Ναι</label>
-                            <br>
-                            <input type="radio" id="incorrect_field_of_study" name="user_field_of_study" value="No">
-                            <label for="No">Οχι</label>
-                        </label>
-                        </div>
-                        <div class="spacing">
-                            <label for="user_reason_for_field">
-                                <details>
-                                <summary>Τι σας ενδιαφέρει σε αυτόν τον κλάδο; </summary>
+                            <label for="user_birthday">
+                                <span>Ημερομηνία γέννησης:</span>
                                 <br>
-                                <textarea id="user_reason_for_field" name="user_reason_for_field" rows="8" cols="50"></textarea>
-                                </details>
+                                <input type="date" id="user_birthday" name="user_birthday" min = "1911-01-01" max="2020-12-31" required >
+                                <span class="error" id="age_error"></span>
                             </label>
                         </div>
                         <div class="spacing">
-                            <label>
-                                <span>Τι σας φαίνεται πιο ενδιαφέρον; </span>
+                            <label for="user_email"> 
+                                <span>E-mail:</span>
                                 <br>
-                                <input list="programming_fields" id="user_programming_field" name="user_computer_fields" autocomplete="on">
-                                <datalist id="programming_fields">
-                                    <option value="Προγραμματισμός">
-                                    <option value="Κατασκευή και ανάπτυξη ιστοσελίδων">
-                                    <option value="Ανάπτυξη εφαρμογών για κινητές συσκευές">
-                                </datalist>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Creating the form for when the user picks literature -->
-                    <div id="Literature_div" hidden>
-                        <div class="spacing">
-                            <label for="user_field_of_study">
-                                <span>Σπουδάζεται πάνω σε αυτόν τον κλάδο; </span>
-                                <br>
-                                <input type="radio" id="correct_field_of_study" name="user_field_of_study" value="yes">
-                                <label for="Yes">Ναι</label>
-                                <br>
-                                <input type="radio" id="incorrect_field_of_study" name="user_field_of_study" value="No">
-                                <label for="No">Οχι</label>
+                                <input type="email" id="user_email" name="user_email"  required>
                             </label>
                         </div>
                         <div class="spacing">
-                            <label for="user_reason_for_field">
-                                <details>
-                                <summary>Τι σας ενδιαφέρει σε αυτόν τον κλάδο; </summary>
+                            <label for="user_phone">
+                                <span>Κινητό τηλέφωνο</span>
                                 <br>
-                                <textarea id="user_reason_for_field" name="user_reason_for_field" rows="8" cols="50"></textarea>
-                                </details>
+                                <input type="tel" id="user_phone" name="user_phone" pattern="[0-9]{10}" required>
                             </label>
                         </div>
                         <div class="spacing">
-                            <label>
-                                <span>Τι σας φαίνεται πιο ενδιαφέρον; </span>
+                            <label for="user_country">
+                                <span>Χώρα</span>
                                 <br>
-                                <input list="literature_fields" id="user_literature_field" name="user_humanitarian_fields" autocomplete="on">
-                                <datalist id="literature_fields">
-                                    <option value="Μυθολογία">
-                                    <option value="Φιλοσοφία">
-                                    <option value="Μουσική">
-                                </datalist>
+                                <select id="user_country" name="user_country">
+                                    <option value="Afganistan">Afghanistan</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Algeria">Algeria</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Andorra">Andorra</option>
+                                    <option value="Angola">Angola</option>
+                                    <option value="Anguilla">Anguilla</option>
+                                    <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Armenia">Armenia</option>
+                                    <option value="Aruba">Aruba</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Azerbaijan">Azerbaijan</option>
+                                    <option value="Bahamas">Bahamas</option>
+                                    <option value="Bahrain">Bahrain</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Barbados">Barbados</option>
+                                    <option value="Belarus">Belarus</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Belize">Belize</option>
+                                    <option value="Benin">Benin</option>
+                                    <option value="Bermuda">Bermuda</option>
+                                    <option value="Bhutan">Bhutan</option>
+                                    <option value="Bolivia">Bolivia</option>
+                                    <option value="Bonaire">Bonaire</option>
+                                    <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                                    <option value="Botswana">Botswana</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                                    <option value="Brunei">Brunei</option>
+                                    <option value="Bulgaria">Bulgaria</option>
+                                    <option value="Burkina Faso">Burkina Faso</option>
+                                    <option value="Burundi">Burundi</option>
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Canary Islands">Canary Islands</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                    <option value="Cayman Islands">Cayman Islands</option>
+                                    <option value="Central African Republic">Central African Republic</option>
+                                    <option value="Chad">Chad</option>
+                                    <option value="Channel Islands">Channel Islands</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="China">China</option>
+                                    <option value="Christmas Island">Christmas Island</option>
+                                    <option value="Cocos Island">Cocos Island</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Comoros">Comoros</option>
+                                    <option value="Congo">Congo</option>
+                                    <option value="Cook Islands">Cook Islands</option>
+                                    <option value="Costa Rica">Costa Rica</option>
+                                    <option value="Cote DIvoire">Cote DIvoire</option>
+                                    <option value="Croatia">Croatia</option>
+                                    <option value="Cuba">Cuba</option>
+                                    <option value="Curaco">Curacao</option>
+                                    <option value="Cyprus">Cyprus</option>
+                                    <option value="Czech Republic">Czech Republic</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Djibouti">Djibouti</option>
+                                    <option value="Dominica">Dominica</option>
+                                    <option value="Dominican Republic">Dominican Republic</option>
+                                    <option value="East Timor">East Timor</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="El Salvador">El Salvador</option>
+                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                    <option value="Eritrea">Eritrea</option>
+                                    <option value="Estonia">Estonia</option>
+                                    <option value="Ethiopia">Ethiopia</option>
+                                    <option value="Falkland Islands">Falkland Islands</option>
+                                    <option value="Faroe Islands">Faroe Islands</option>
+                                    <option value="Fiji">Fiji</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="French Guiana">French Guiana</option>
+                                    <option value="French Polynesia">French Polynesia</option>
+                                    <option value="French Southern Ter">French Southern Ter</option>
+                                    <option value="Gabon">Gabon</option>
+                                    <option value="Gambia">Gambia</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Ghana">Ghana</option>
+                                    <option value="Gibraltar">Gibraltar</option>
+                                    <option value="Great Britain">Great Britain</option>
+                                    <option value="Greece">Greece</option>
+                                    <option value="Greenland">Greenland</option>
+                                    <option value="Grenada">Grenada</option>
+                                    <option value="Guadeloupe">Guadeloupe</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Guatemala">Guatemala</option>
+                                    <option value="Guinea">Guinea</option>
+                                    <option value="Guyana">Guyana</option>
+                                    <option value="Haiti">Haiti</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Honduras">Honduras</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="Hungary">Hungary</option>
+                                    <option value="Iceland">Iceland</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="India">India</option>
+                                    <option value="Iran">Iran</option>
+                                    <option value="Iraq">Iraq</option>
+                                    <option value="Ireland">Ireland</option>
+                                    <option value="Isle of Man">Isle of Man</option>
+                                    <option value="Israel">Israel</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Jamaica">Jamaica</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Kazakhstan">Kazakhstan</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option value="Kiribati">Kiribati</option>
+                                    <option value="Korea North">Korea North</option>
+                                    <option value="Korea Sout">Korea South</option>
+                                    <option value="Kuwait">Kuwait</option>
+                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                    <option value="Laos">Laos</option>
+                                    <option value="Latvia">Latvia</option>
+                                    <option value="Lebanon">Lebanon</option>
+                                    <option value="Lesotho">Lesotho</option>
+                                    <option value="Liberia">Liberia</option>
+                                    <option value="Libya">Libya</option>
+                                    <option value="Liechtenstein">Liechtenstein</option>
+                                    <option value="Lithuania">Lithuania</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Macau">Macau</option>
+                                    <option value="Macedonia">Macedonia</option>
+                                    <option value="Madagascar">Madagascar</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Malawi">Malawi</option>
+                                    <option value="Maldives">Maldives</option>
+                                    <option value="Mali">Mali</option>
+                                    <option value="Malta">Malta</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Martinique">Martinique</option>
+                                    <option value="Mauritania">Mauritania</option>
+                                    <option value="Mauritius">Mauritius</option>
+                                    <option value="Mayotte">Mayotte</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="Midway Islands">Midway Islands</option>
+                                    <option value="Moldova">Moldova</option>
+                                    <option value="Monaco">Monaco</option>
+                                    <option value="Mongolia">Mongolia</option>
+                                    <option value="Montserrat">Montserrat</option>
+                                    <option value="Morocco">Morocco</option>
+                                    <option value="Mozambique">Mozambique</option>
+                                    <option value="Myanmar">Myanmar</option>
+                                    <option value="Nambia">Nambia</option>
+                                    <option value="Nauru">Nauru</option>
+                                    <option value="Nepal">Nepal</option>
+                                    <option value="Netherland Antilles">Netherland Antilles</option>
+                                    <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                                    <option value="Nevis">Nevis</option>
+                                    <option value="New Caledonia">New Caledonia</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                    <option value="Nicaragua">Nicaragua</option>
+                                    <option value="Niger">Niger</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="Niue">Niue</option>
+                                    <option value="Norfolk Island">Norfolk Island</option>
+                                    <option value="Norway">Norway</option>
+                                    <option value="Oman">Oman</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    <option value="Palau Island">Palau Island</option>
+                                    <option value="Palestine">Palestine</option>
+                                    <option value="Panama">Panama</option>
+                                    <option value="Papua New Guinea">Papua New Guinea</option>
+                                    <option value="Paraguay">Paraguay</option>
+                                    <option value="Peru">Peru</option>
+                                    <option value="Phillipines">Philippines</option>
+                                    <option value="Pitcairn Island">Pitcairn Island</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Qatar">Qatar</option>
+                                    <option value="Republic of Montenegro">Republic of Montenegro</option>
+                                    <option value="Republic of Serbia">Republic of Serbia</option>
+                                    <option value="Reunion">Reunion</option>
+                                    <option value="Romania">Romania</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Rwanda">Rwanda</option>
+                                    <option value="St Barthelemy">St Barthelemy</option>
+                                    <option value="St Eustatius">St Eustatius</option>
+                                    <option value="St Helena">St Helena</option>
+                                    <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                                    <option value="St Lucia">St Lucia</option>
+                                    <option value="St Maarten">St Maarten</option>
+                                    <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                                    <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                                    <option value="Saipan">Saipan</option>
+                                    <option value="Samoa">Samoa</option>
+                                    <option value="Samoa American">Samoa American</option>
+                                    <option value="San Marino">San Marino</option>
+                                    <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                    <option value="Senegal">Senegal</option>
+                                    <option value="Seychelles">Seychelles</option>
+                                    <option value="Sierra Leone">Sierra Leone</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Slovakia">Slovakia</option>
+                                    <option value="Slovenia">Slovenia</option>
+                                    <option value="Solomon Islands">Solomon Islands</option>
+                                    <option value="Somalia">Somalia</option>
+                                    <option value="South Africa">South Africa</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Sri Lanka">Sri Lanka</option>
+                                    <option value="Sudan">Sudan</option>
+                                    <option value="Suriname">Suriname</option>
+                                    <option value="Swaziland">Swaziland</option>
+                                    <option value="Sweden">Sweden</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="Syria">Syria</option>
+                                    <option value="Tahiti">Tahiti</option>
+                                    <option value="Taiwan">Taiwan</option>
+                                    <option value="Tajikistan">Tajikistan</option>
+                                    <option value="Tanzania">Tanzania</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Togo">Togo</option>
+                                    <option value="Tokelau">Tokelau</option>
+                                    <option value="Tonga">Tonga</option>
+                                    <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                                    <option value="Tunisia">Tunisia</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Turkmenistan">Turkmenistan</option>
+                                    <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                                    <option value="Tuvalu">Tuvalu</option>
+                                    <option value="Uganda">Uganda</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="United Arab Erimates">United Arab Emirates</option>
+                                    <option value="United States of America">United States of America</option>
+                                    <option value="Uraguay">Uruguay</option>
+                                    <option value="Uzbekistan">Uzbekistan</option>
+                                    <option value="Vanuatu">Vanuatu</option>
+                                    <option value="Vatican City State">Vatican City State</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                    <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                                    <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                                    <option value="Wake Island">Wake Island</option>
+                                    <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                                    <option value="Yemen">Yemen</option>
+                                    <option value="Zaire">Zaire</option>
+                                    <option value="Zambia">Zambia</option>
+                                    <option value="Zimbabwe">Zimbabwe</option>
+                                </select>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Στοιχεία κάρτας</legend>
+                        <div class="spacing">
+                            <label for="card_number">
+                                <span>Αριθμός κάρτας: </span>
+                                <br>
+                                <input type="text" id="card_number" name="card_number" placeholder="1234-1234-1234-1234" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
                             </label>
                         </div>
                         <div class="spacing">
-                            <label>
-                                <span>Πόσες μέρες της εβδομάδας ακούτε μουσική;</span>
+                            <label for="card_holder">
+                                <span>Ον/μο Ιδιοκτήτη: </span>
                                 <br>
-                                <select id="user_music_frequency" name="user_music_frequency">
-                                    <option value="never">0</option>
-                                    <option value="rarely">1-3</option>
-                                    <option value="often">3-5</option>
-                                    <option value="daily">5-7</option>
+                                <input type="text" id="card_holder" name="card_holder" placeholder="Giorgos Z. Gewrgiou">
+                            </label>
+                        </div>
+                        <div class="spacing">
+                            <label for="card_cvv">
+                                <span>CVV: </span>
+                                <br>
+                                <input type="text" id="card_cvv" name="card_cvv" pattern="[0-9]{3}">
+                            </label>
+                        </div>
+                        <div class="spacing">
+                            <label for="card_adress">
+                                <span>Διέυθυνση χρέωσης: </span>
+                                <br>
+                                <input type="text" id="card_adress" name="card_adress">
+                            </label>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Στοιχεία λογαριασμού</legend>
+                        <div class="spacing">
+                            <label for="username">
+                                <span>Όνομα χρήστη: </span>
+                                <br>
+                                <input type="text" id="username" name="username">
+                            </label>
+                        </div>
+                        <div class="spacing">
+                            <label for="user_password">
+                                <span>Κωδικός: </span>
+                                <br>
+                                <input type="password" id="user_password" name="user_password">
+                            </label>
+                        </div>
+                        <div class="spacing">
+                            <label for="user_password_config">
+                                <span>Επιβεβαίωση κωδικού: </span>
+                                <br>
+                                <input type="password" id="user_password_config" name="user_password_config">
+                                <span class="error" id="password_error"></span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <!--Creating the questionnaire for the user-->
+                    <fieldset>
+                        <legend>Ερωτηματολόγιο</legend>
+                        <div class="spacing">
+                            <label for="user_education">
+                                <span>Επίπεδο σπουδών: </span>
+                                <br>
+                                <select id="user_education" name="user_education">
+                                    <option value="primary">Δημοτικό</option>
+                                    <option value="secondary">Γυμνάσιο</option>
+                                    <option value="high_school">Λύκειο</option>
+                                    <option value="University">Πανεπιστήμιο</option>
+                                    <option value="no_answer">Δεν απαντώ</option>
                                 </select>
                             </label>
                         </div>
                         <div class="spacing">
-                            <label>
-                                <span>Πόσο πολύ σας αρέσει να διαβάζετε βιβλία;</span>
-                                <br>
-                                <input type="range" id="user_reading" name="user_reading_preference" value="user_reading_preference">
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Creating the form for when the user picks natural sciences-->
-                    <div id="Natural_Sciences_div" hidden>
-                        <div class="spacing">
-                            <label for="user_reason_for_field">
-                                <details>
-                                <summary>Τι σας ενδιαφέρει σε αυτόν τον κλάδο; </summary>
-                                <br>
-                                <textarea id="user_reason_for_field" name="user_reason_for_field" rows="8" cols="50"></textarea>
-                                </details>
-                            </label>
+                        <label id="graduation_year" for="graduation_year" hidden>
+                            <span>Έτος αποφοίτησης: </span>
+                            <br>
+                            <input id="gradyear" type="number" min="1920" max="2021" step="1" value="2021">
+                        </label>
                         </div>
                         <div class="spacing">
+                            <label for="user_sex">
+                                <span>Φύλο: </span>
+                                <br>
+                                <select id="user_sex" name="user_sex">
+                                    <option value="male">Άρρεν</option>
+                                    <option value="female">Θήλυ</option>
+                                    <option value="other">Άλλο</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="spacing">
+                            <label for="user_hobby">
+                                <span>Έχετε κάποιο χόμπι στον ελεύθερο σας χρόνο; </span>
+                                <br>
+                                <input type="radio" id="user_hobby" name="user_hobby_decision" value="yes">
+                                <label for="Yes">Ναι</label>
+                                <br>
+                                <input type="radio" id="user_no_hobby" name="user_hobby_decision" value="No">
+                                <label for="No">Οχι</label>
+                            </label>
+                        </div>
+                        <div class="spacing">
+                            <div for="user_preference">
+                                <span>Ποιόν κλάδο προτιμάτε: </span>
+                                <br>
+                                <input onclick=enableCorrectForm(this.value) type="radio" id="Computer_Science" name="user_preference" value="Computer_Science">
+                                <label for="Computer_Science">Επιστήμη υπολογιστών</label>
+                                <br>
+                                <input onclick=enableCorrectForm(this.value) type="radio" id="Literature" name="user_preference" value="Literature">
+                                <label for="Literature">Ανθρωπιστικές επιστήμες</label>
+                                <br>
+                                <input  onclick=enableCorrectForm(this.value) type="radio" id="Natural_Sciences" name="user_preference" value="Natural_Sciences">
+                                <label for="Natural_Sciences">Φυσικές επιστήμες</label>
+                            </div>
+                        </div>
+                        <!-- Creating the form for when the user picks computer science -->
+                        <div id="Computer_Science_form" hidden> 
+                            <div class="spacing">
+                                <label for="user_favorite_language">
+                                    <span>Αγαπημένη γλώσσα προγραμματισμού: </span>
+                                    <br>
+                                    <input list="programming_languages" id="user_fav_language" name="user_fav_language" autocomplete="on">
+                                    <datalist id="programming_languages">
+                                        <option value="Python">
+                                        <option value="Java">
+                                        <option value="C++">
+                                        <option value="C#">
+                                        <option value="Javascript">                       
+                                    </datalist>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label for="user_experience">
+                                    <span>Πόσο έμπειρος είστε σε αυτήν την γλώσσα; </span>
+                                    <br>
+                                    <input type="range" id="user_experience_counter" name="user_experience" value="user_experience_counter">
+                                </label>
+                            </div>
+                            <div class="spacing">
                             <label for="user_field_of_study">
                                 <span>Σπουδάζεται πάνω σε αυτόν τον κλάδο; </span>
                                 <br>
@@ -574,26 +510,128 @@
                                 <input type="radio" id="incorrect_field_of_study" name="user_field_of_study" value="No">
                                 <label for="No">Οχι</label>
                             </label>
+                            </div>
+                            <div class="spacing">
+                                <label for="user_reason_for_field">
+                                    <details>
+                                    <summary>Τι σας ενδιαφέρει σε αυτόν τον κλάδο; </summary>
+                                    <br>
+                                    <textarea id="user_reason_for_field" name="user_reason_for_field" rows="8" cols="50"></textarea>
+                                    </details>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label>
+                                    <span>Τι σας φαίνεται πιο ενδιαφέρον; </span>
+                                    <br>
+                                    <input list="programming_fields" id="user_programming_field" name="user_computer_fields" autocomplete="on">
+                                    <datalist id="programming_fields">
+                                        <option value="Προγραμματισμός">
+                                        <option value="Κατασκευή και ανάπτυξη ιστοσελίδων">
+                                        <option value="Ανάπτυξη εφαρμογών για κινητές συσκευές">
+                                    </datalist>
+                                </label>
+                            </div>
                         </div>
-                        <div class="spacing">
-                            <label>
-                                <span>Τι σας φαίνεται πιο ενδιαφέρον; </span>
-                                <br>
-                                <input list="natural_sciences_fields" id="user_natural_sciences_field" name="user_natural_fields" autocomplete="on">
-                                <datalist id="natural_sciences_fields">
-                                    <option value="Φυσική">
-                                    <option value="Βιολογία">
-                                    <option value="Χημεία">
-                                </datalist>
-                            </label>
+                        <!-- Creating the form for when the user picks literature -->
+                        <div id="Literature_form" hidden>
+                            <div class="spacing">
+                                <label for="user_field_of_study">
+                                    <span>Σπουδάζεται πάνω σε αυτόν τον κλάδο; </span>
+                                    <br>
+                                    <input type="radio" id="correct_field_of_study" name="user_field_of_study" value="yes">
+                                    <label for="Yes">Ναι</label>
+                                    <br>
+                                    <input type="radio" id="incorrect_field_of_study" name="user_field_of_study" value="No">
+                                    <label for="No">Οχι</label>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label for="user_reason_for_field">
+                                    <details>
+                                    <summary>Τι σας ενδιαφέρει σε αυτόν τον κλάδο; </summary>
+                                    <br>
+                                    <textarea id="user_reason_for_field" name="user_reason_for_field" rows="8" cols="50"></textarea>
+                                    </details>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label>
+                                    <span>Τι σας φαίνεται πιο ενδιαφέρον; </span>
+                                    <br>
+                                    <input list="literature_fields" id="user_literature_field" name="user_humanitarian_fields" autocomplete="on">
+                                    <datalist id="literature_fields">
+                                        <option value="Μυθολογία">
+                                        <option value="Φιλοσοφία">
+                                        <option value="Μουσική">
+                                    </datalist>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label>
+                                    <span>Πόσες μέρες της εβδομάδας ακούτε μουσική;</span>
+                                    <br>
+                                    <select id="user_music_frequency" name="user_music_frequency">
+                                        <option value="never">0</option>
+                                        <option value="rarely">1-3</option>
+                                        <option value="often">3-5</option>
+                                        <option value="daily">5-7</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label>
+                                    <span>Πόσο πολύ σας αρέσει να διαβάζετε βιβλία;</span>
+                                    <br>
+                                    <input type="range" id="user_reading" name="user_reading_preference" value="user_reading_preference">
+                                </label>
+                            </div>
                         </div>
+                        <!-- Creating the form for when the user picks natural sciences-->
+                        <div id="Natural_Sciences_form" hidden>
+                            <div class="spacing">
+                                <label for="user_reason_for_field">
+                                    <details>
+                                    <summary>Τι σας ενδιαφέρει σε αυτόν τον κλάδο; </summary>
+                                    <br>
+                                    <textarea id="user_reason_for_field" name="user_reason_for_field" rows="8" cols="50"></textarea>
+                                    </details>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label for="user_field_of_study">
+                                    <span>Σπουδάζεται πάνω σε αυτόν τον κλάδο; </span>
+                                    <br>
+                                    <input type="radio" id="correct_field_of_study" name="user_field_of_study" value="yes">
+                                    <label for="Yes">Ναι</label>
+                                    <br>
+                                    <input type="radio" id="incorrect_field_of_study" name="user_field_of_study" value="No">
+                                    <label for="No">Οχι</label>
+                                </label>
+                            </div>
+                            <div class="spacing">
+                                <label>
+                                    <span>Τι σας φαίνεται πιο ενδιαφέρον; </span>
+                                    <br>
+                                    <input list="natural_sciences_fields" id="user_natural_sciences_field" name="user_natural_fields" autocomplete="on">
+                                    <datalist id="natural_sciences_fields">
+                                        <option value="Φυσική">
+                                        <option value="Βιολογία">
+                                        <option value="Χημεία">
+                                    </datalist>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <div>
+                        <input id="submit_button" type="submit" value="Submit">
                     </div>
-                </fieldset>
-                <br>
-                <div>
-                    <input id="submit_button" type="submit" value="Submit">
+                </form>
+                <div id="filler">
+            
                 </div>
-            </form>
+        </div>
         </main>
         <footer>
             <div class = "info">
