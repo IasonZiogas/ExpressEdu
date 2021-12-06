@@ -2,7 +2,7 @@ window.onload = function(){
     // document.getElementById("submit_button").addEventListener("click", emailValidation);
     document.getElementById("submit_button").addEventListener("click", passwordValidation);
     document.getElementById("submit_button").addEventListener("click", ageValidation);
-    document.getElementById("user_education").addEventListener("click", enablegradyear)
+    document.getElementById("user_education").addEventListener("click", enablegradyear);
 //     document.getElementById("Computer_Science").addEventListener("click", enableCorrectForm("Computer_Science"))
 //     document.getElementById("Literature").addEventListener("click", enableCorrectForm("Literature"))
 //     document.getElementById("Natural_Sciences").addEventListener("click", enableCorrectForm("Natural_Sciences"))
@@ -21,15 +21,25 @@ function enablegradyear(){
 
 // Show the correct questions depending of the users favorite field
 function enableCorrectForm(field){
+    var computerScience= document.getElementsByClassName("Computer_Science_sidebar");
+    var literature = document.getElementsByClassName("Literature_sidebar");
+    var naturalSciences= document.getElementsByClassName("Natural_Sciences_sidebar");
     if(field == "Computer_Science"){
         // Displaying appropriate form
         document.getElementById("Computer_Science_form").hidden=false;
         document.getElementById("Literature_form").hidden=true;
         document.getElementById("Natural_Sciences_form").hidden=true;
         // Displaying appropriate sidebar
-        document.getElementById("Computer_Science_sidebar").hidden = false;
-        document.getElementById("Literature_sidebar").hidden = true;
-        document.getElementById("Natural_Sciences_sidebar").hidden = true;
+        for (let i = 0; i < computerScience.length; i++){
+            computerScience[i].hidden=false;
+         }
+         for (let y = 0; y < literature.length; y++){
+             literature[y].hidden = true;
+         }
+         for (let z = 0; z< naturalSciences.length; z++){
+             naturalSciences[z].hidden=true;
+         }
+
 
     }
     else if(field== "Literature"){
@@ -38,10 +48,15 @@ function enableCorrectForm(field){
         document.getElementById("Literature_form").hidden=false;
         document.getElementById("Natural_Sciences_form").hidden=true;
         // Displaying appropriate sidebar
-        document.getElementById("Computer_Science_sidebar").hidden = true;
-        document.getElementById("Literature_sidebar").hidden = false;
-        document.getElementById("Natural_Sciences_sidebar").hidden = true;
-
+        for (let i = 0; i < computerScience.length; i++){
+           computerScience[i].hidden=true;
+        }
+        for (let y = 0; y < literature.length; y++){
+            literature[y].hidden = false;
+        }
+        for (let z = 0; z< naturalSciences.length; z++){
+            naturalSciences[z].hidden=true;
+        }
     }
     else if(field == "Natural_Sciences"){
         // Displaying appropriate form
@@ -49,9 +64,15 @@ function enableCorrectForm(field){
         document.getElementById("Literature_form").hidden=true;
         document.getElementById("Natural_Sciences_form").hidden=false;
         // Displaying appropriate sidebar
-        document.getElementById("Computer_Science_sidebar").hidden = true;
-        document.getElementById("Literature_sidebar").hidden = true;
-        document.getElementById("Natural_Sciences_sidebar").hidden = false;
+        for (let i = 0; i < computerScience.length; i++){
+            computerScience[i].hidden=true;
+         }
+         for (let y = 0; y < literature.length; y++){
+             literature[y].hidden = true;
+         }
+         for (let z = 0; z< naturalSciences.length; z++){
+             naturalSciences[z].hidden=false;
+         }
     }
 }
 

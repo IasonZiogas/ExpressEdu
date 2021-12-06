@@ -33,8 +33,8 @@
             <div id="container">
                 <!-- Creating a sidebar that recommends the appropriate courses depending on users preferences -->
                 <div id ="left-container">
-                    <div id="Computer_Science_sidebar">
-                        <h4>Κάποια προτεινόμενα μαθήματα</h4>
+                    <div class="Computer_Science_sidebar">
+                        <h4>Κάποια προτεινόμενα πεδία</h4>
                             <a href="Programming_Courses.html" target="_blank">Μαθήματα προγραμματισμού</a>
                             <a href="Mobile_app_development_courses.html" target="_blank">Μαθήματα ανάπτυξης εφαρμογών για κινητές συσκευές</a>
                             <a href="Web_development_courses.html" target="_blank">Μαθήματα Κατασκευής και ανάπτυξης ιστοσελίδων</a>
@@ -47,8 +47,8 @@
                             <br>
                             <h5></h5>
                     </div>
-                    <div id="Literature_sidebar" hidden>
-                        <h4>Κάποια προτεινόμενα μαθήματα</h4>
+                    <div class="Literature_sidebar" hidden>
+                        <h4>Κάποια προτεινόμενα πεδία</h4>
                             <a href="Mythology_Courses.html" target="_blank">Μυθολογία</a>
                             <a href="Physics_Courses.html" target="_blank">Φιλοσοφία</a>
                             <a href="Music_Courses.html" target="_blank">Μουσική</a>
@@ -60,10 +60,11 @@
                                 <a href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a>
                             <br>
                     </div>
-                    <div id="Natural_Sciences_sidebar" hidden>
+                    <div class="Natural_Sciences_sidebar" hidden>
 
                     </div>
                 </div>
+                <!-- The form with the information the user has to fill in -->
                 <form class="form">
                     <h4 class="course">Παρακαλώ πολύ συμπληρώστε τα στοιχεία σας</h2>
                     <fieldset>
@@ -629,7 +630,85 @@
                     </div>
                 </form>
                 <div id="filler">
-            
+                    <h2>Προτεινόμενα μαθήματα</h2>
+                    <div class="Computer_Science_sidebar">
+                        <article>
+                            <h3>
+                                Python
+                            </h3>
+                            <a href="https://www.edx.org/course/programming-for-everybody-getting-started-with-pyt" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/python.png" alt="python logo" >
+                            </a>
+                        </article>
+                        <article>
+                            <h3>
+                                JavaScript
+                            </h3>
+                            <a href="https://www.edx.org/course/javascript-introduction" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/javascript.png" alt="javascript logo" >
+                            </a>
+                        </article>
+                        <article>
+                            <h3>
+                                IOS app development
+                            </h3>
+                            <a href="https://www.edx.org/course/build-your-very-first-ios-app" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/ios_logo.png" alt="The IOS logo" >
+                            </a>
+                        </article>
+                    </div>
+                    <div class="Literature_sidebar" hidden>
+                        <article>
+                            <h3>
+                                Ελληνική Μυθολογία
+                            </h3>
+                            <a href="https://www.edx.org/course/the-ancient-greek-hero-2" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/greek_mythology.png" alt="The Birth of Venus" >
+                            </a>
+                        </article>
+                        <article>
+                            <h3>
+                                Δικαιοσύνη
+                            </h3>
+                            <a href="https://www.edx.org/course/philosophy-and-critical-thinking" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/justice.png" alt="Scale" >
+                            </a>
+                        </article>
+                        <article>
+                            <h3>
+                                Μουσική για Ευεξία
+                            </h3>
+                            <a href="https://www.edx.org/course/music-for-wellness" target="_blank">
+                                <img class="course_image" src="../Exercise1/images/music_therapy.png" alt="music therapy">
+                            </a>
+                        </article>
+                    </div>
+                    <div class="Natural_Sciences_sidebar" hidden>
+                        <article>
+                            <h3>
+                                Αστροφυσική
+                            </h3>
+                            <a href="https://www.edx.org/search?q=astrophysics&tab=course" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/astro.png" alt="universe" >
+                            </a>
+                        </article>
+                        <article>
+                            <h3>
+                            Γενετική
+                            </h3>
+                            <a href="https://www.edx.org/search?q=genomics&tab=course" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/chromo.png" alt="chromosome" >
+                            </a>
+                        </article>
+                        <article>
+                            <h3>
+                                Οργανική χημεία
+                            </h3>
+                            <a href="https://www.edx.org/search?q=Organic%20Chemistry&tab=course" target="_blank">
+                                <img class="course_image" img src="../Exercise1/images/org.png" alt="grass" >
+                            </a>
+                        </article>
+                    </div>
                 </div>
         </div>
         </main>

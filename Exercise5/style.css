@@ -51,6 +51,14 @@ body {
   min-height: 100vh;
 }
 
+.logo{
+  margin:01em;
+  width:150px;
+  height:150px;
+  float:left;
+}
+
+
 main{
   flex:1;
 }
@@ -137,71 +145,17 @@ a:visited{
   margin:01em;
 }
 
-/*---------------------------------------------------- Customizing the main content(Άσκηση 4 - Responsive Design) ----------------------------------------------------*/
-
-/*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
-
-/* Media query for 2 columns for a tablet screen */
-@media screen and (max-width: 992px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-column-gap:40px;
-  }
-
-  .front_page_recommendation{
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-  }
-
-  .course_image{
-    width:170px;
-    height:170px;
-  }
-}
-
-/* media query for a single column for a smartphone screen */
-@media screen and (max-width: 600px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto;
-  }
-
-  .front_page_recommendation{
-    display:grid;
-    grid-template-columns: auto;
-    justify-content: space-evenly;
-  }
-
-  /* Changing the width of the recommendation class in order for the content to spread evenly */
-  .front_page_recommendation .recommendation{
-    width:130px;
-    margin:01em;
-  }
-
-  /* Changing the logo dimensions */
-  .logo{
-    margin:01em;
-    width:100px;
-    height:100px;
-    float:left;
-  }
-
-  /* making images disappear when viewed by phone */
-  .menu_image{
-    display:none;
-  }
-
-  /*changing dimensions of each courses image */
-  .course_image{
-    width:130px;
-    height:130px;
-  }
-}
-
-
 /* Askhsh 5 */
+
+/* Managing the main content with a grid */
+#container{
+  display:grid;
+  grid-template-columns:17% 60% 17%;
+  grid-template-rows: 100%;
+  grid-column-gap: 40px;
+}
+
+/* Designing the Submit button */
 .sign_up_button{
   border: 4px solid orangered;
   background-color: white;
@@ -214,20 +168,13 @@ a:visited{
   cursor: pointer;
 }
 
+/* Changing the bakcground color of the Submit button */
 .sign_up_button:hover{
   background-color: orangered;
 }
 
 .form{
   margin:01em;
-}
-
-
-.logo{
-  margin:01em;
-  width:150px;
-  height:150px;
-  float:left;
 }
 
 .form{
@@ -279,9 +226,10 @@ legend{
   z-index: 1; 
   margin-left:10px;
   margin-right:15px;
-  margin-bottom:20px;
+  margin-bottom:20px; 
 }
 
+/* Styling the links inside the sidebar */
 #left-container a{
   display:block;
   padding:10px;
@@ -289,16 +237,9 @@ legend{
   text-align: center;
 }
 
+/* alignign the text  */
 #left-container h4{
  text-align: center;
-}
-
-/* Managing the main content with a grid */
-#container{
-  display:grid;
-  grid-template-columns:17% 60% 17%;
-  grid-template-rows: 100%;
-  grid-column-gap: 40px;
 }
  
 /* adding a filler layout to make content symmetric */
@@ -312,7 +253,130 @@ legend{
   margin-left:15px;
   margin-right:10px;
   margin-bottom:20px;
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
+
+/* Changing the background color for links inside the right container */
+#filler a:hover{
+  background-color: var(--main_color);
+  cursor:pointer;
+}
+
+#filler article{
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+/*Making each individual sidebar use flex to display all the courses evenly */
+/* Δεν μπορούσαμε να φτιάξουμε μια κοινή κλάση γιατί μετά δεν θα δούλευε το enableCorrectForm στο javascript αρχείο */
+.Literature_sidebar{
+  flex:2;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Computer_Science_sidebar{
+  flex:2;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Natural_Sciences_sidebar{
+  flex:2;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+[hidden]{
+  display:none;
+}
+
+
+
+/*---------------------------------------------------- Customizing the main content(Άσκηση 4 - Responsive Design) ----------------------------------------------------*/
+
+/*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
+
+/* Media query for 2 columns for a tablet screen */
+@media screen and (max-width: 992px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:40px;
+  }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+  }
+
+  .course_image{
+    width:170px;
+    height:170px;
+  }
+
+  /* Hiding both left and right containers when viewed by a phone */
+  #left-container{
+    display:none;
+  }
+    
+  #filler{
+    display:none;
+  }
+
+  /* raplacing the grid display with a block display */
+  #container{
+    display:block;
+  }
+}
+
+/* media query for a single column for a smartphone screen */
+@media screen and (max-width: 600px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto;
+  }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+  }
+
+  /* Changing the width of the recommendation class in order for the content to spread evenly */
+  .front_page_recommendation .recommendation{
+    width:130px;
+    margin:01em;
+  }
+
+  /* Changing the logo dimensions */
+  .logo{
+    margin:01em;
+    width:100px;
+    height:100px;
+    float:left;
+  }
+
+  /* making images disappear when viewed by phone */
+  .menu_image{
+    display:none;
+  }
+
+  /*changing dimensions of each courses image */
+  .course_image{
+    width:130px;
+    height:130px;
+  }
+
+}
+
 
 
 
