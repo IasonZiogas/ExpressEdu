@@ -33,8 +33,10 @@
             <div id="container">
                 <!-- Creating a sidebar that recommends the appropriate courses depending on users preferences -->
                 <div id ="left-container">
+                    <article>
+                        <h2>Προτεινόμενες κατηγορίες</h2>
+                    </article>
                     <div class="Computer_Science_sidebar">
-                        <h4>Κάποια προτεινόμενα πεδία</h4>
                             <a href="Programming_Courses.html" target="_blank">Μαθήματα προγραμματισμού</a>
                             <a href="Mobile_app_development_courses.html" target="_blank">Μαθήματα ανάπτυξης εφαρμογών για κινητές συσκευές</a>
                             <a href="Web_development_courses.html" target="_blank">Μαθήματα Κατασκευής και ανάπτυξης ιστοσελίδων</a>
@@ -48,9 +50,8 @@
                             <h5></h5>
                     </div>
                     <div class="Literature_sidebar" hidden>
-                        <h4>Κάποια προτεινόμενα πεδία</h4>
                             <a href="Mythology_Courses.html" target="_blank">Μυθολογία</a>
-                            <a href="Physics_Courses.html" target="_blank">Φιλοσοφία</a>
+                            <a href="Philosophy_Courses.html" target="_blank">Φιλοσοφία</a>
                             <a href="Music_Courses.html" target="_blank">Μουσική</a>
                         <br>
                         <h4>Χρήσιμοι σύνδεσμοι</h4>
@@ -61,7 +62,16 @@
                             <br>
                     </div>
                     <div class="Natural_Sciences_sidebar" hidden>
-
+                        <a href="Physics_Courses.html" target="_blank">Φυσική</a>
+                        <a href="Biology_Courses.html" target="_blank">Βιολογία</a>
+                        <a href="Chemistry_Courses.html" target="_blank">Χημεία</a>
+                        <br>
+                        <h4>Χρήσιμοι σύνδεσμοι</h4>
+                            <h5 style="text-align: center;">Editors τους οποίους μπορείτε να χρησιμοποιήσετε</h5>
+                                <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">Visual Studio</a>
+                                <a href="https://code.visualstudio.com/Download" target="_blank">Visual Studio Code</a>
+                                <a href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a>
+                        <br>
                     </div>
                 </div>
                 <!-- The form with the information the user has to fill in -->
@@ -629,8 +639,10 @@
                         <input id="submit_button" type="submit" value="Submit">
                     </div>
                 </form>
-                <div id="filler">
+                <div id="left-container">
+                    <article>
                     <h2>Προτεινόμενα μαθήματα</h2>
+                    </article>
                     <div class="Computer_Science_sidebar">
                         <article>
                             <h3>
@@ -714,13 +726,20 @@
         </main>
         <footer>
             <div class = "info">
-            <h4>
-                Follow us on social media!      |    <a href="Contact_Us.html">Contact Us!</a> |
-            </h4>
-            <ul>
-                <li><img img src="../Exercise1/images/facebook.png" alt="Facebook Logo" width="20px" height="20px"> <a href="https://www.facebook.com/">Facebook</a></li>
-                <li><img img src="../Exercise1/images/twitter.png" alt="Twitter Logo" width="20px" height="20px"> <a href="https://www.twitter.com/">Twitter</a></li>
-            </ul>
+                <div>
+                    <h4>
+                        Follow us on social media! 
+                    </h4>
+                    <ul>
+                        <li><img img src="../Exercise1/images/facebook.png" alt="Facebook Logo" width="20px" height="20px"> <a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><img img src="../Exercise1/images/twitter.png" alt="Twitter Logo" width="20px" height="20px"> <a href="https://www.twitter.com/">Twitter  </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>
+                    <a href="Contact_Us.html">Contact Us!</a>
+                    </h4>
+                </div>
             </div>
         </footer>
     </body>

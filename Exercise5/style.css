@@ -36,6 +36,12 @@ body footer {
   padding-bottom:5px;
   width:100%;
   bottom:0;
+  text-align: center;
+  clear:both;
+}
+
+footer ul{
+  list-style-position: inside;
 }
 
 body {
@@ -106,6 +112,10 @@ a:visited{
 
 .info{
   margin:01em;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-column-gap:20px;
+  justify-content:center;
 }
 
 
@@ -150,7 +160,7 @@ a:visited{
 /* Managing the main content with a grid */
 #container{
   display:grid;
-  grid-template-columns:17% 60% 17%;
+  grid-template-columns:17% 61% 17%;
   grid-template-rows: 100%;
   grid-column-gap: 40px;
 }
@@ -217,7 +227,6 @@ legend{
 
 /* Customizing the sidebar menu */
 #left-container{
-  float:left;
   background-color: var(--main_color);
   margin-top:2em;
   clear:both;
@@ -227,48 +236,32 @@ legend{
   margin-left:10px;
   margin-right:15px;
   margin-bottom:20px; 
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size:1.1em;
 }
 
 /* Styling the links inside the sidebar */
 #left-container a{
   display:block;
   padding:10px;
-  font-size:1.2em;
-  text-align: center;
+  font-size:1.1em;
 }
 
-/* alignign the text  */
-#left-container h4{
- text-align: center;
-}
- 
-/* adding a filler layout to make content symmetric */
-#filler{
-  float:right;
-  background-color: var(--main_color);
-  margin-top:2em;
-  clear:both;
-  top:0;
-  overflow-x: hidden;
-  margin-left:15px;
-  margin-right:10px;
-  margin-bottom:20px;
-  text-align:center;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-/* Changing the background color for links inside the right container */
-#filler a:hover{
-  background-color: var(--main_color);
-  cursor:pointer;
-}
-
-#filler article{
+#left-container article{
   margin-top:2em;
   margin-bottom:2em;
 }
+
+
+/* Changing the background color for links inside the right container */
+/* #filler a:hover{
+  background-color: var(--main_color);
+  cursor:pointer;
+} */
+
 
 /*Making each individual sidebar use flex to display all the courses evenly */
 /* Δεν μπορούσαμε να φτιάξουμε μια κοινή κλάση γιατί μετά δεν θα δούλευε το enableCorrectForm στο javascript αρχείο */
@@ -284,6 +277,7 @@ legend{
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
+  position:sticky;
 }
 
 .Natural_Sciences_sidebar{
