@@ -108,6 +108,21 @@ a:visited{
   margin:01em;
 }
 
+/*Choose category button */
+input[type=submit]:hover {
+  background  : rgb(206, 110, 0);
+  cursor: pointer;
+}
+
+input[type=submit] {
+  width: 100%;
+  border-radius: 1em;
+  padding: 5px 5px;
+  border-color: black;
+  margin: 8px 0;
+  font-size: 100%;
+  background  : orange;
+}
 
 /*----------------------------------------------------Testing Grid ----------------------------------------------------*/
 
@@ -304,7 +319,8 @@ legend{
 /*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
 
 /* Media query for 2 columns for a tablet screen */
-@media screen and (max-width: 992px){
+
+/* @media screen and (max-width: 992px){
   .category_collection{
     display:grid;
     grid-template-columns: auto auto;
@@ -317,25 +333,35 @@ legend{
     justify-content: space-evenly;
   }
 
+  input[type=submit] {
+    font-size: 200%;
+    width: 100%;
+    border-radius: 1em;
+    padding: 5px 5px;
+    border-color: black;
+    margin: 8px 0;
+    background  : orange;
+  }
+  
   .course_image{
     width:170px;
     height:170px;
-  }
+  } */
 
   /* Hiding both left and right containers when viewed by a phone */
-  #left-container{
+/*   #left-container{
     display:none;
-  }
+  } */
     
-  #filler{
+/*   #filler{
     display:none;
-  }
+  } */
 
   /* raplacing the grid display with a block display */
-  #container{
+/*   #container{
     display:block;
   }
-}
+} */
 
 /* media query for a single column for a smartphone screen */
 @media screen and (max-width: 600px){
@@ -349,7 +375,7 @@ legend{
     grid-template-columns: auto;
     justify-content: space-evenly;
   }
-
+   
   /* Changing the width of the recommendation class in order for the content to spread evenly */
   .front_page_recommendation .recommendation{
     width:130px;
