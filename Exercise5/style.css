@@ -230,7 +230,7 @@ input[type=submit] {
 
 /*----------------------------------------------------Testing Grid ----------------------------------------------------*/
 
-/* Testing flex */
+/* Customizing the front page to show 4 recommended courses by using a grid */
 .front_page_recommendation{
   display:grid;
   grid-template-columns: auto auto auto auto;

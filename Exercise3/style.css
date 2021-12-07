@@ -21,18 +21,30 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
+/* Changing the color and the padding of the header */
 body header{
   background-color:var(--main_color);
   padding-bottom:10px;
   padding-top:5px;
 }
 
+/* Changing the color,the padding and the width of the footer */
 body footer {
   background-color:var(--main_color);
   padding-top:5px;
   padding-bottom:5px;
-
+  width:100%;
+  bottom:0;
+  text-align: center;
+  clear:both;
 }
+
+/* So the bullets of the ul follow the text to the middle of the screen */
+footer ul{
+  list-style-position: inside;
+}
+
 
 body {
   /*New font added*/
@@ -40,8 +52,26 @@ body {
   background-color:white;
   /* Gia na ginei borderless to site */
   margin:0em;
+  /* adding a grid to avoid the footer situation */
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  min-height: 100vh;
 }
 
+/* Customizing the logo */
+.logo{
+  margin:01em;
+  width:150px;
+  height:150px;
+  float:left;
+}
+
+main{
+  flex:1;
+}
+
+/* Image describing each html page of subjects */
 .menu_image{
   margin:01em;
   width:170px ;
@@ -67,6 +97,10 @@ body {
 
 .info{
   margin:01em;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-column-gap:20px;
+  justify-content:center;
 }
 
 a:hover{
@@ -86,27 +120,23 @@ a:visited{
   margin:01em;
 }
 
+.course_image{
+  width:210px;
+  height:210px;
+}
+
 /*----------------------------------------------------Testing Grid ----------------------------------------------------*/
 
-/* .recommendation{
-  /* min-width: 600px;
-  display:grid;
-  grid-template-columns: minmax(120px,170px) minmax(120px,170px) minmax(120px,170px) minmax(120px,170px);
-  grid-column-gap:70px;
-  justify-content: center;
-  margin:01em;
-} */ 
-
-/* Testing flex */
+/* Customizing the front page to show 4 recommended courses by using a grid */
 .front_page_recommendation{
-  display:flex;
-  flex-wrap:wrap;
-  flex-basis:100%;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap:40px;
   justify-content: space-evenly;
 }
 
 .front_page_recommendation .recommendation{
-  width: 170px;
+  width:220px;
   margin:01em;
 }
 
@@ -131,28 +161,9 @@ a:visited{
   margin:01em;
 }
 
-/*---------------------------------------------------- Customizing the main content(Άσκηση 4 - Responsive Design) ----------------------------------------------------*/
-
-/* Creating a margin between each column of the grid*/
-/* .category_collection .category{
+.logo{
   margin:01em;
-} */
-
-/*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
-
-/* Media query for 2 columns for a tablet screen */
-@media screen and (max-width: 992px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-column-gap:40px;
-  }
-}
-
-/* media query for a single column for a smartphone screen */
-@media screen and (max-width: 600px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto;
-  }
+  width:150px;
+  height:150px;
+  float:left;
 }
