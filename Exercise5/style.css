@@ -52,6 +52,12 @@ body header #collapsible {
   body header div > ul{
     margin-top:2em;
     list-style: none;
+    left:0;
+  }
+
+  nav ul li{
+    margin-top:3px;
+    margin-bottom:3px;
   }
 
   body header ul li{
@@ -80,6 +86,7 @@ body footer {
   clear:both;
 }
 
+/* So the bullets of the ul follow the text to the middle of the screen */
 footer ul{
   list-style-position: inside;
 }
@@ -111,10 +118,13 @@ main{
 
 /* Customizing each categories and subject image on the header of the page */
 .menu_image{
-  margin:01em;
   float:right;
+  margin-left: auto;
 }
 
+.space{
+  margin:01em;
+}
 
 .menu{
   margin:01em;
@@ -155,6 +165,10 @@ a:visited{
   grid-template-columns: auto auto;
   grid-column-gap:20px;
   justify-content:center;
+}
+
+#Contact_Us_button{
+  width:max-content;
 }
 
 /*Choose category button */
@@ -385,11 +399,7 @@ legend{
   #left-container{
     display:none;
   }
-    
-  #filler{
-    display:none;
-  }
-
+  
   /* raplacing the grid display with a block display */
   #container{
     display:block;
@@ -434,6 +444,15 @@ legend{
     height:130px;
   }
 
+  /* Hiding both left and right containers when viewed by a phone */
+  #left-container{
+    display:none;
+  }
+    
+  /* raplacing the grid display with a block display */
+  #container{
+    display:block;
+  }
 }
 
 
