@@ -205,7 +205,7 @@ input[type=submit] {
 .category_collection{
   display:grid;
   grid-template-columns: auto auto auto;
-  grid-column-gap:70px;
+  grid-column-gap:1em;
   margin:01em;
 }
 
@@ -277,6 +277,16 @@ legend{
   display: block;
   color: red;
   margin: 5px 0 0 0;
+}
+
+.course{
+  margin: 1em;
+  border-radius: 1em;
+  outline-style: solid;
+  outline-width: 4px;
+  outline-color: orange;
+  padding: 1em 1em;
+  background: #ffa50047;
 }
 
 /* Customizing the sidebar menu */
@@ -357,7 +367,7 @@ legend{
   .category_collection{
     display:grid;
     grid-template-columns: auto auto;
-    grid-column-gap:40px;
+    grid-column-gap:0.5em;
   }
 
   .front_page_recommendation{
