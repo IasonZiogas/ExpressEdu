@@ -3,9 +3,6 @@ window.onload = function(){
     document.getElementById("submit_button").addEventListener("click", passwordValidation);
     document.getElementById("submit_button").addEventListener("click", ageValidation);
     document.getElementById("user_education").addEventListener("click", enablegradyear);
-    //     document.getElementById("Computer_Science").addEventListener("click", enableCorrectForm("Computer_Science"))
-//     document.getElementById("Literature").addEventListener("click", enableCorrectForm("Literature"))
-//     document.getElementById("Natural_Sciences").addEventListener("click", enableCorrectForm("Natural_Sciences"))
 }
 
 // when you select university as your education status graduation year pops up

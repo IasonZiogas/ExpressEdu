@@ -28,16 +28,6 @@ body header .nav{
   overflow: visible;
 }
 
-/* body header .nav{
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  width:160px;
-  text-align: left;
-  padding-bottom: 5px;
-  border: 4px solid black;
-  margin-right:5px;
-} */
 
   /* Designing the collapsable menu button */
 body header #collapsible {
@@ -52,6 +42,11 @@ body header #collapsible {
   cursor: pointer;
   /* Matching the sign up button */
   width:160px;
+  }
+
+  #collapsible:hover{
+    background-color: black;
+    color: white;
   }
 
   /* Changing the design of the ul that displays the 2 main buttons */
@@ -140,7 +135,7 @@ body {
   /*New font added*/
   font-family: 'FirstFont', monospace;
   background-color:white;
-  /* Gia na ginei borderless to site */
+  /* Making the site borderless*/
   margin:0em;
   /* adding a flex to position the footer always at the bottom of the page */
   display:flex;
@@ -149,6 +144,7 @@ body {
   min-height: 100vh;
 }
 
+/* Customizing the logo */
 .logo{
   margin:01em;
   width:150px;
@@ -379,13 +375,6 @@ legend{
 }
 
 
-/* Changing the background color for links inside the right container */
-/* #filler a:hover{
-  background-color: var(--main_color);
-  cursor:pointer;
-} */
-
-
 /*Making each individual sidebar use flex to display all the courses evenly */
 /* Δεν μπορούσαμε να φτιάξουμε μια κοινή κλάση γιατί μετά δεν θα δούλευε το enableCorrectForm στο javascript αρχείο */
 .Literature_sidebar{
@@ -420,49 +409,8 @@ legend{
 
 /*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
 
-/* Media query for 2 columns for a tablet screen */
-
-@media screen and (max-width: 992px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-column-gap:0.5em;
-  }
-
-  .front_page_recommendation{
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-  }
-
-  input[type=submit] {
-    font-size: 100%;
-    width: 100%;
-    border-radius: 1em;
-    padding: 5px 5px;
-    border-color: black;
-    margin: 8px 0;
-    background  : orange;
-  }
-  
-  .course_image{
-    width:170px;
-    height:170px;
-  } */
-
-  /* Hiding both left and right containers when viewed by a phone */
-  #left-container{
-    display:none;
-  }
-  
-  /* raplacing the grid display with a block display */
-  #container{
-    display:block;
-  }
-}
-
 /* media query for a single column for a smartphone screen */
-@media screen and (max-width: 600px){
+@media only screen and (min-width:200px) and (max-width:767px){
   .category_collection{
     display:grid;
     grid-template-columns: auto;
@@ -507,6 +455,61 @@ legend{
   /* raplacing the grid display with a block display */
   #container{
     display:block;
+  }
+
+  footer{
+    font-size:0.7em;
+  }
+
+}
+
+
+/* Media query for 2 columns for a tablet screen */
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:0.5em;
+  }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+  }
+
+  input[type=submit] {
+    font-size: 100%;
+    width: 100%;
+    border-radius: 1em;
+    padding: 5px 5px;
+    border-color: black;
+    margin: 8px 0;
+    background  : orange;
+  }
+  
+  .course_image{
+    width:170px;
+    height:170px;
+  } */
+
+  /* Hiding both left and right containers when viewed by a phone */
+  #left-container{
+    display:none;
+  }
+  
+  /* raplacing the grid display with a block display */
+  #container{
+    display:block;
+  }
+
+  /* Changing the font-size went viewed by a phone */
+  footer{
+    font-size:0.5em;
+  }
+
+  .course{
+    font-size:0.8em;
   }
 }
 
