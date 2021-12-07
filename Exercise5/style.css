@@ -381,7 +381,7 @@ legend{
   }
 
   input[type=submit] {
-    font-size: 200%;
+    font-size: 100%;
     width: 100%;
     border-radius: 1em;
     padding: 5px 5px;
