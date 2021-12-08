@@ -152,6 +152,18 @@ body {
   float:left;
 }
 
+/* Customizing the biography */
+.biography{
+  margin:01em;
+  font-size:1.2em;
+}
+
+/* Using a flex to display both the biographys correctly */
+.biography_collection{
+  display:flex;
+  flex-direction: column;
+}
+
 
 main{
   flex:1;

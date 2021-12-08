@@ -125,9 +125,22 @@ a:visited{
   margin:01em;
 }
 
+/* Customizing the image of each course */
 .course_image{
   width:210px;
   height:210px;
+}
+
+/* Customizing the biography */
+.biography{
+  margin:01em;
+  font-size:1.2em;
+}
+
+/* Using a flex to display both the biographys correctly */
+.biography_collection{
+  display:flex;
+  flex-direction: column;
 }
 
 /*----------------------------------------------------Testing Grid ----------------------------------------------------*/
