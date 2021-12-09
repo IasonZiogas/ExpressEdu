@@ -10,7 +10,6 @@
         <link rel="icon" type="image/x-icon" href="../Exercise1/images/favicon.ico">
         <link rel="stylesheet" href="../Exercise5/style.css"  type="text/css">
         <script src="Form_validation.js" type="text/javascript"></script>
-        <script src="Menu_design.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -402,28 +401,28 @@
                             <label for="card_number">
                                 <span>Αριθμός κάρτας: </span>
                                 <br>
-                                <input type="text" id="card_number" name="card_number" placeholder="1234-1234-1234-1234" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                                <input type="text" id="card_number" name="card_number" placeholder="1234-1234-1234-1234" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
                             </label>
                         </div>
                         <div class="spacing">
                             <label for="card_holder">
                                 <span>Ον/μο Ιδιοκτήτη: </span>
                                 <br>
-                                <input type="text" id="card_holder" name="card_holder" placeholder="Giorgos Z. Gewrgiou">
+                                <input type="text" id="card_holder" name="card_holder" placeholder="Giorgos Z. Gewrgiou" required>
                             </label>
                         </div>
                         <div class="spacing">
                             <label for="card_cvv">
                                 <span>CVV: </span>
                                 <br>
-                                <input type="text" id="card_cvv" name="card_cvv" pattern="[0-9]{3}">
+                                <input type="text" id="card_cvv" name="card_cvv" pattern="[0-9]{3}" required>
                             </label>
                         </div>
                         <div class="spacing">
                             <label for="card_adress">
                                 <span>Διέυθυνση χρέωσης: </span>
                                 <br>
-                                <input type="text" id="card_adress" name="card_adress">
+                                <input type="text" id="card_adress" name="card_adress" pattern="[A-Za-z0-9'\.\-\s\,]" required>
                             </label>
                         </div>
                     </fieldset>
@@ -434,21 +433,21 @@
                             <label for="username">
                                 <span>Όνομα χρήστη: </span>
                                 <br>
-                                <input type="text" id="username" name="username">
+                                <input type="text" id="username" name="username" required>
                             </label>
                         </div>
                         <div class="spacing">
                             <label for="user_password">
                                 <span>Κωδικός: </span>
                                 <br>
-                                <input type="password" id="user_password" name="user_password">
+                                <input type="password" id="user_password" name="user_password" required>
                             </label>
                         </div>
                         <div class="spacing">
                             <label for="user_password_config">
                                 <span>Επιβεβαίωση κωδικού: </span>
                                 <br>
-                                <input type="password" id="user_password_config" name="user_password_config">
+                                <input type="password" id="user_password_config" name="user_password_config" required>
                                 <span class="error" id="password_error"></span>
                             </label>
                         </div>
@@ -470,11 +469,25 @@
                                 </select>
                             </label>
                         </div>
-                        <div class="spacing">
-                        <label id="graduation_year" for="graduation_year" hidden>
+                        <div class="spacing" id="graduation_year" hidden>
+                            <label for="graduation_year">
                             <span>Έτος αποφοίτησης: </span>
                             <br>
                             <input id="gradyear" type="number" min="1920" max="2021" step="1" value="2021">
+                            <br>
+                            <br>
+                            <label for="user_bachelor">
+                                <span>Σκοπεύετε να κάνετε κάποιο μεταπτυχιακό; </span>
+                                <br>
+                                <input type="radio" id="user_bachelor" name="user_bachelor_info" value="yes">
+                                <label for="Yes">Ναι</label>
+                                <br>
+                                <input type="radio" id="user_no_bachelor" name="user_bachelor_info" value="No">
+                                <label for="No">Οχι</label>
+                                <br>
+                                <input type="radio" id="user__has_bachelor" name="user_bachelor_info" value="Already_has">
+                                <label for="No">Έχω ήδη κανει</label>
+                            </label>
                         </label>
                         </div>
                         <div class="spacing">

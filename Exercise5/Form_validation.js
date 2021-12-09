@@ -3,6 +3,7 @@ window.onload = function(){
     document.getElementById("submit_button").addEventListener("click", passwordValidation);
     document.getElementById("submit_button").addEventListener("click", ageValidation);
     document.getElementById("user_education").addEventListener("click", enablegradyear);
+    document.getElementById("collapsible").addEventListener("click",collapsableMenu);
 }
 
 // when you select university as your education status graduation year pops up
@@ -83,6 +84,7 @@ function passwordValidation(){
         error.textContent = ""
     }
     else{
+        window.alert("Invalid input")
         error.textContent = "Passwords should match"
     }    
 }
@@ -124,4 +126,15 @@ function ageValidation(){
         window.alert("Invalid input")
         error.textContent = "You have to be over 18 years old"
     }  
+}
+
+// Adding collapsable menu
+function collapsableMenu(){
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+          }
 }
