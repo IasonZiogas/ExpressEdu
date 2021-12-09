@@ -164,7 +164,7 @@ body {
   flex-direction: column;
 }
 
-
+/* So the footer is at the bottom of the page in every html file */
 main{
   flex:1;
 }
@@ -179,9 +179,6 @@ main{
   margin:01em;
 }
 
-.menu{
-  margin:01em;
-}
 
 /* Assigning the image of each course to the correct place */
 .course img{
@@ -212,6 +209,7 @@ a:visited{
   margin:01em;
 }
 
+/* Customizing the footer using a 2 column flex */
 .info{
   margin:01em;
   display:grid;
@@ -220,6 +218,7 @@ a:visited{
   justify-content:center;
 }
 
+/* Customizing the contact us submit button */
 #Contact_Us_button{
   width:max-content;
 }
@@ -230,6 +229,7 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
+/* Customizing all the submit buttons of the site */
 input[type=submit] {
   width: 100%;
   border-radius: 1em;
@@ -308,6 +308,7 @@ input[type=submit] {
   margin:01em;
 }
 
+/* Using a grid to "control" the layout of the form */
 .form{
   display: grid;
   grid-template-columns: 100%;
@@ -346,6 +347,7 @@ legend{
   margin: 5px 0 0 0;
 }
 
+/* Decorating the courses*/
 .course{
   margin: 1em;
   border-radius: 1em;
@@ -469,9 +471,15 @@ legend{
     display:block;
   }
 
+  /* Changing the font size of the footer so it doesnt take that much space */
   footer{
     font-size:0.7em;
   }
+
+  .course{
+    font-size:0.7em;
+  }
+
 
 }
 
@@ -503,9 +511,9 @@ legend{
   .course_image{
     width:170px;
     height:170px;
-  } */
+  } 
 
-  /* Hiding both left and right containers when viewed by a phone */
+  /* Hiding both left and right containers when viewed by a tablet */
   #left-container{
     display:none;
   }
@@ -515,9 +523,9 @@ legend{
     display:block;
   }
 
-  /* Changing the font-size went viewed by a phone */
+  /* Changing the font-size went viewed by a tablet */
   footer{
-    font-size:0.5em;
+    font-size:0.9em;
   }
 
   .course{

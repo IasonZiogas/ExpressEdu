@@ -190,28 +190,8 @@ a:visited{
 
 /*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
 
-/* Media query for 2 columns for a tablet screen */
-@media screen and (max-width: 992px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-column-gap:40px;
-  }
-
-  .front_page_recommendation{
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-  }
-
-  .course_image{
-    width:170px;
-    height:170px;
-  }
-}
-
 /* media query for a single column for a smartphone screen */
-@media screen and (max-width: 600px){
+@media only screen and (min-width:200px) and (max-width:767px){
   .category_collection{
     display:grid;
     grid-template-columns: auto;
@@ -247,5 +227,56 @@ a:visited{
     width:130px;
     height:130px;
   }
+
+   /* Changing the font size of the footer so it doesnt take that much space */
+   footer{
+    font-size:0.7em;
+  }
+
+  .course{
+    font-size:0.7em;
+  }
+
 }
+
+
+/* Media query for 2 columns for a tablet screen */
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:40px;
+  }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+  }
+
+  input[type=submit] {
+    font-size: 100%;
+    width: 100%;
+    border-radius: 1em;
+    padding: 5px 5px;
+    border-color: black;
+    margin: 8px 0;
+    background  : orange;
+  }
+
+  .course_image{
+    width:170px;
+    height:170px;
+  }
+
+    /* Changing the font-size went viewed by a tablet */
+    footer{
+      font-size:0.9em;
+    }
+  
+    .course{
+      font-size:0.8em;
+    }
+}
+
 
