@@ -1,5 +1,5 @@
 window.onload = function(){
-    // document.getElementById("submit_button").addEventListener("click", emailValidation);
+    document.getElementById("submit_button").addEventListener("click", UsernameValidation);
     document.getElementById("submit_button").addEventListener("click", passwordValidation);
     document.getElementById("submit_button").addEventListener("click", ageValidation);
     document.getElementById("user_education").addEventListener("click", enablegradyear);
@@ -138,3 +138,16 @@ function collapsableMenu(){
             content.style.display = "block";
           }
 }
+
+// Checking if the username is  already used
+function UsernameValidation(){
+    let UserName =  document.getElementById("username")
+    if (UserName.value == "Iasonas" || UserName.value == "Dimitris"){
+        UserName.setCustomValidity("");
+    }
+    else{
+        UserName.setCustomValidity("To username χρησιμοποιείται ήδη.");
+    }
+    }
+
+
