@@ -143,10 +143,10 @@ function collapsableMenu(){
 function UsernameValidation(){
     let UserName =  document.getElementById("username")
     if (UserName.value == "Iasonas" || UserName.value == "Dimitris"){
-        UserName.setCustomValidity("");
+        UserName.setCustomValidity("To username χρησιμοποιείται ήδη.");
     }
     else{
-        UserName.setCustomValidity("To username χρησιμοποιείται ήδη.");
+        UserName.setCustomValidity("");
     }
     }
 
