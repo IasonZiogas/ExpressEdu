@@ -1,0 +1,538 @@
+
+/* Testing different fonts*/
+/* @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap'); */
+
+/* Setting a new font for our website */
+@font-face {
+  font-family:"FirstFont";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/azeretmono/v1/3XF5ErsiyJsY9O_Gepph-FvtTQgMQUdNekSfnPRR27yby5s.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family:"FirstFont";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/azeretmono/v1/3XF5ErsiyJsY9O_Gepph-FvtTQgMQUdNekSfnPRR1byb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Making the menu collapsable */
+
+body header .nav{
+  display: none;
+  overflow: visible;
+}
+
+
+  /* Designing the collapsable menu button */
+body header #collapsible {
+  border: 4px solid black;
+  background-color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  /* Matching the sign up button */
+  width:160px;
+  }
+
+  #collapsible:hover{
+    background-color: black;
+    color: white;
+  }
+
+  /* Changing the design of the ul that displays the 2 main buttons */
+  body header div > ul{
+    margin-top:2em;
+    list-style: none;
+    left:0;
+  }
+
+  nav ul {
+    list-style-type: none;
+    border: 4px solid black;
+    background: white;
+    padding: 0;
+    display: table;
+    table-layout: fixed; 
+  }
+
+  nav ul li{
+    float: left;
+    padding: 5px;
+    border-bottom: 2px solid black;
+    width: auto;
+  }
+  
+  nav ul li:hover{
+    background: grey;
+  }
+
+  nav ul li a{
+    text-decoration: none;
+  }
+
+  nav ul li a:hover{
+    background-color: rgba(245, 222, 179, 0);
+  }
+
+  nav ul li a:visited{
+    color:black;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none
+  }
+
+  body header ul li{
+    float:none;
+  }
+
+  button a{
+    text-decoration: none;
+    text-emphasis: true;
+  }
+  button a:visited{
+    color:black
+  }
+
+
+/* Changing the color and the padding of the header */
+body header{
+  background-color:var(--main_color);
+  padding-bottom:10px;
+  padding-top:5px;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+}
+
+/* Changing the color,the padding and the width of the footer */
+body footer {
+  background-color:var(--main_color);
+  padding-top:5px;
+  padding-bottom:5px;
+  width:100%;
+  bottom:0;
+  text-align: center;
+  clear:both;
+}
+
+/* So the bullets of the ul follow the text to the middle of the screen */
+footer ul{
+  list-style-position: inside;
+}
+
+body {
+  /*New font added*/
+  font-family: 'FirstFont', monospace;
+  background-color:white;
+  /* Making the site borderless*/
+  margin:0em;
+  /* adding a flex to position the footer always at the bottom of the page */
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  min-height: 100vh;
+}
+
+/* Customizing the logo */
+.logo{
+  margin:01em;
+  width:150px;
+  height:150px;
+  float:left;
+}
+
+/* Customizing the biography */
+.biography{
+  margin:01em;
+  font-size:1.2em;
+}
+
+/* Using a flex to display both the biographys correctly */
+.biography_collection{
+  display:flex;
+  flex-direction: column;
+}
+
+/* So the footer is at the bottom of the page in every html file */
+main{
+  flex:1;
+}
+
+/* Customizing each categories and subject image on the header of the page */
+.menu_image{
+  float:right;
+  margin-left: auto;
+}
+
+.space{
+  margin:01em;
+}
+
+
+/* Assigning the image of each course to the correct place */
+.course img{
+  float:left;
+  margin:0 1em;
+}
+
+/* Changing the color of all the links when you hover over them */
+a:hover{
+  background-color: orangered;
+}
+
+a:link{
+  display: block;
+  color:black;
+}
+/* When the link is visited the color changes */
+a:visited{
+  color:purple;
+}
+
+/* adding margin around each "course" to create a visually pleasing result */
+.course{
+  margin:01em;
+}
+
+.category{
+  margin:01em;
+}
+
+/* Customizing the footer using a 2 column flex */
+.info{
+  margin:01em;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-column-gap:20px;
+  justify-content:center;
+}
+
+/* Customizing the contact us submit button */
+#Contact_Us_button{
+  width:max-content;
+}
+
+/*Choose category button */
+input[type=submit]:hover {
+  background  : rgb(206, 110, 0);
+  cursor: pointer;
+}
+
+/* Customizing all the submit buttons of the site */
+input[type=submit] {
+  width: 100%;
+  border-radius: 1em;
+  padding: 5px 5px;
+  border-color: black;
+  margin: 8px 0;
+  font-size: 100%;
+  background  : var(--main_color);
+}
+
+/*----------------------------------------------------Testing Grid ----------------------------------------------------*/
+
+/* Customizing the front page to show 4 recommended courses by using a grid */
+.front_page_recommendation{
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap:40px;
+  justify-content: space-evenly;
+}
+
+.front_page_recommendation .recommendation{
+  width:220px;
+  margin:01em;
+}
+
+.front_page_recommendation a:hover {
+  background-color:white;
+}
+
+.title{
+  text-align:center;
+}
+
+/* Variable for the main color */
+:root{
+  --main_color:orange;
+}
+
+/* Using a grid to dispaly all the categories of a specific field */
+.category_collection{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap:1em;
+  margin:01em;
+}
+
+/* Askhsh 5 */
+
+/* Managing the main content with a grid */
+#container{
+  display:grid;
+  grid-template-columns:17% 61% 17%;
+  grid-template-rows: 100%;
+  grid-column-gap: 40px;
+}
+
+/* Designing the Submit button */
+.sign_up_button{
+  border: 4px solid orangered;
+  background-color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Changing the bakcground color of the Submit button */
+.sign_up_button:hover{
+  background-color: orangered;
+}
+
+.form{
+  margin:01em;
+}
+
+/* Using a grid to "control" the layout of the form */
+.form{
+  display: grid;
+  grid-template-columns: 100%;
+
+}
+
+/* Creating space between each question and changing the font size */
+.spacing{
+  margin-bottom: 01em;
+  font-size: 1.1em;
+}
+
+/* Changing the font size of the fieldset title */
+legend{
+  font-size: 1.7em;
+}
+
+/* Designing the submit button */
+#submit_button{
+  float:right;
+  margin-right:2em;
+  margin-bottom:01em;
+  height:50px;
+  width:100px;
+  font-size:1.2em;
+}
+
+#submit_button:hover{
+  background-color: orangered;
+  cursor:pointer;
+}
+
+.error {
+  display: block;
+  color: red;
+  margin: 5px 0 0 0;
+}
+
+/* Decorating the courses*/
+.course{
+  margin: 1em;
+  border-radius: 1em;
+  outline-style: solid;
+  outline-width: 4px;
+  outline-color: orange;
+  padding: 1em 1em;
+  background: #ffa50047;
+}
+
+/* Customizing the sidebar menu */
+#left-container{
+  background-color: var(--main_color);
+  margin-top:2em;
+  clear:both;
+  top:0;
+  overflow-x: hidden;
+  z-index: 1; 
+  margin-left:10px;
+  margin-right:15px;
+  margin-bottom:20px; 
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size:1.1em;
+}
+
+/* Styling the links inside the sidebar */
+#left-container a{
+  display:block;
+  padding:10px;
+  font-size:1.1em;
+}
+
+#left-container article{
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+
+/*Making each individual sidebar use flex to display all the courses evenly */
+/* Δεν μπορούσαμε να φτιάξουμε μια κοινή κλάση γιατί μετά δεν θα δούλευε το enableCorrectForm στο javascript αρχείο */
+.Literature_sidebar{
+  flex:2;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Computer_Science_sidebar{
+  flex:2;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position:sticky;
+}
+
+.Natural_Sciences_sidebar{
+  flex:2;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+[hidden]{
+  display:none;
+}
+
+
+
+/*---------------------------------------------------- Customizing the main content(Άσκηση 4 - Responsive Design) ----------------------------------------------------*/
+
+/*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
+
+/* media query for a single column for a smartphone screen */
+@media only screen and (min-width:200px) and (max-width:767px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto;
+  }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+  }
+   
+  /* Changing the width of the recommendation class in order for the content to spread evenly */
+  .front_page_recommendation .recommendation{
+    width:130px;
+    margin:01em;
+  }
+
+  /* Changing the logo dimensions */
+  .logo{
+    margin:01em;
+    width:100px;
+    height:100px;
+    float:left;
+  }
+
+  /* making images disappear when viewed by phone */
+  .menu_image{
+    display:none;
+  }
+
+  /*changing dimensions of each courses image */
+  .course_image{
+    width:130px;
+    height:130px;
+  }
+
+  /* Hiding both left and right containers when viewed by a phone */
+  #left-container{
+    display:none;
+  }
+    
+  /* raplacing the grid display with a block display */
+  #container{
+    display:block;
+  }
+
+  /* Changing the font size of the footer so it doesnt take that much space */
+  footer{
+    font-size:0.7em;
+  }
+
+  .course{
+    font-size:0.7em;
+  }
+
+
+}
+
+
+/* Media query for 2 columns for a tablet screen */
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+  .category_collection{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:0.5em;
+  }
+
+  .front_page_recommendation{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+  }
+
+  input[type=submit] {
+    font-size: 100%;
+    width: 100%;
+    border-radius: 1em;
+    padding: 5px 5px;
+    border-color: black;
+    margin: 8px 0;
+    background  : orange;
+  }
+  
+  .course_image{
+    width:170px;
+    height:170px;
+  } 
+
+  /* Hiding both left and right containers when viewed by a tablet */
+  #left-container{
+    display:none;
+  }
+  
+  /* raplacing the grid display with a block display */
+  #container{
+    display:block;
+  }
+
+  /* Changing the font-size went viewed by a tablet */
+  footer{
+    font-size:0.9em;
+  }
+
+  .course{
+    font-size:0.8em;
+  }
+}
+
+
+
+
