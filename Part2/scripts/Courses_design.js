@@ -1,7 +1,7 @@
 
 window.onload=function(){
     document.getElementById("collapsible").addEventListener("click",collapsableMenu);
-    document.getElementById("search_button").addEventListener("click",coursesFound);
+    coursesFound();
 }
 
 
@@ -52,10 +52,9 @@ function collapsableMenu(){
 
 
 function coursesFound(){
-    document.getElementById("front_page_recommendation").hidden = true;
-    document.getElementById("courses_found").hidden = false;
-    let keyword = document.getElementById("search_bar").value;
-    let url = "https://elearning-aueb.herokuapp.com/courses/search?title="+ keyword ;
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    let url = "https://elearning-aueb.herokuapp.com/courses/search?category="+ params.category;
     // request.open("GET", url)
     // request.setRequestHeader('Accept', 'application/json')
     // request.send()

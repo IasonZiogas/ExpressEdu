@@ -152,6 +152,19 @@ body {
   float:left;
 }
 
+.profile{
+  margin-left: auto;
+  order: 2;
+  margin-right:2em;
+  margin-top:3em;
+}
+
+.avatar{
+  width:100px;
+  height:100px;
+  text-align:center;
+}
+
 /* Customizing the biography */
 .biography{
   margin:01em;
@@ -184,6 +197,8 @@ main{
 .course img{
   float:left;
   margin:0 1em;
+  width: 170px;
+  height: 170px;
 }
 
 /* Changing the color of all the links when you hover over them */
@@ -231,7 +246,7 @@ input[type=submit]:hover {
 
 /* Customizing all the submit buttons of the site */
 input[type=submit] {
-  width: 100%;
+  width: auto;
   border-radius: 1em;
   padding: 5px 5px;
   border-color: black;
@@ -271,7 +286,7 @@ input[type=submit] {
 /* Using a grid to dispaly all the categories of a specific field */
 .category_collection{
   display:grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33% 33% 33%;
   grid-column-gap:1em;
   margin:01em;
 }
@@ -304,15 +319,12 @@ input[type=submit] {
   background-color: orangered;
 }
 
-.form{
-  margin:01em;
-}
-
 /* Using a grid to "control" the layout of the form */
 .form{
   display: grid;
   grid-template-columns: 100%;
-
+  margin:01em;
+  height: max-content;
 }
 
 /* Creating space between each question and changing the font size */
@@ -324,6 +336,14 @@ input[type=submit] {
 /* Changing the font size of the fieldset title */
 legend{
   font-size: 1.7em;
+}
+
+.button_style{
+  margin-right:2em;
+  margin-bottom:01em;
+  height:50px;
+  width:100px;
+  font-size:1.2em;
 }
 
 /* Designing the submit button */
@@ -417,121 +437,19 @@ legend{
   display:none;
 }
 
-
-
-/*---------------------------------------------------- Customizing the main content(Άσκηση 4 - Responsive Design) ----------------------------------------------------*/
-
-/*------------------------------------Adding media queries for pc,tablets and phones------------------------------------*/
-
-/* media query for a single column for a smartphone screen */
-@media only screen and (min-width:200px) and (max-width:767px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto;
-  }
-
-  .front_page_recommendation{
-    display:grid;
-    grid-template-columns: auto;
-    justify-content: space-evenly;
-  }
-   
-  /* Changing the width of the recommendation class in order for the content to spread evenly */
-  .front_page_recommendation .recommendation{
-    width:130px;
+header .search {
     margin:01em;
-  }
-
-  /* Changing the logo dimensions */
-  .logo{
-    margin:01em;
-    width:100px;
-    height:100px;
-    float:left;
-  }
-
-  /* making images disappear when viewed by phone */
-  .menu_image{
-    display:none;
-  }
-
-  /*changing dimensions of each courses image */
-  .course_image{
-    width:130px;
-    height:130px;
-  }
-
-  /* Hiding both left and right containers when viewed by a phone */
-  #left-container{
-    display:none;
-  }
-    
-  /* raplacing the grid display with a block display */
-  #container{
-    display:block;
-  }
-
-  /* Changing the font size of the footer so it doesnt take that much space */
-  footer{
-    font-size:0.7em;
-  }
-
-  .course{
-    font-size:0.7em;
-  }
-
-
+    align-self: center;
+    font-size:1.2em;
 }
 
-
-/* Media query for 2 columns for a tablet screen */
-@media only screen and (min-width: 768px) and (max-width: 1000px){
-  .category_collection{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-column-gap:0.5em;
-  }
-
-  .front_page_recommendation{
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-  }
-
-  input[type=submit] {
-    font-size: 100%;
-    width: 100%;
-    border-radius: 1em;
-    padding: 5px 5px;
-    border-color: black;
-    margin: 8px 0;
-    background  : orange;
-  }
-  
-  .course_image{
-    width:170px;
-    height:170px;
-  } 
-
-  /* Hiding both left and right containers when viewed by a tablet */
-  #left-container{
-    display:none;
-  }
-  
-  /* raplacing the grid display with a block display */
-  #container{
-    display:block;
-  }
-
-  /* Changing the font-size went viewed by a tablet */
-  footer{
-    font-size:0.9em;
-  }
-
-  .course{
-    font-size:0.8em;
-  }
+main .search {
+  margin:01em;
+  align-self: center;
+  text-align: center;
+  font-size:1.2em;
 }
+
 
 
 
