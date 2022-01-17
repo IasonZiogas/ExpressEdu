@@ -83,19 +83,15 @@ app.post('/users', function(req,res){
 
 app.post('/users/search', function(req,res){
     let data = req.body;
-    console.log(data);
     let query = {email: String(data.email)}
     UsersDAO.find(query).toArray()
     .then(userList => {
-        if (userList === undefined || userList.lenght === 0){
+        if (userList === undefined || userList.lenght === undefined){
             return res.sendStatus(404);
         }
         else {
             // searching if the password matches the user's email
             let userExists = userList.find(({password}) => password === data.password)
-            console.log("-------------------------------")
-            console.log("else")
-            console.log(userExists);
             if (userExists === undefined){
                 return res.sendStatus(400);
             }
@@ -112,15 +108,12 @@ app.post('/users/get', function(req,res){
     let query = {email: String(data.email)}
     UsersDAO.find(query).toArray()
     .then(userList => {
-        if (userList === undefined || userList.lenght === 0){
+        if (userList === undefined || userList.lenght === undefined){
             return res.sendStatus(404);
         }
         else {
             // searching if the password matches the user's email
             let userExists = userList.find(({password}) => password === data.password)
-            console.log("-------------------------------")
-            console.log("else")
-            console.log(userExists);
             if (userExists === undefined){
                 return res.sendStatus(400);
             }
