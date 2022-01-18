@@ -12,8 +12,6 @@ app.use('/images', express.static('../public/images'));
 app.use('/scripts', express.static('../scripts'));
 app.use('/style', express.static('../style'));
 
-// the 'database' that holds all the users
-// let UsersDAO = []
 
 class User {
     constructor(name, surname, birthday, email, tel, username, password, education) {
@@ -37,7 +35,6 @@ client.connect()
         let server= app.listen(8080)
   })
 
-let firstTime = true;
 
 app.post('/users', function(req,res){
     let data = req.body;
@@ -45,20 +42,10 @@ app.post('/users', function(req,res){
     UsersDAO.find(query).toArray()
     .then(userList => {
         console.log(userList.lenght)
-        if (userList.lenght === undefined && firstTime === true){
-            let new_user = new User(data.name,data.surname,data.birthday,data.email,data.tel,data.username,data.password,data.education);
-            firstTime = false;
-            UsersDAO.insertOne(new_user)
-            .then(result =>{
-                console.log('Inserted' + result.insertedCount)
-                return res.sendStatus(201);
-            })
-        }
-       else if (userList.lenght === 0) {
+        if (userList === undefined){
             let new_user = new User(data.name,data.surname,data.birthday,data.email,data.tel,data.username,data.password,data.education);
             UsersDAO.insertOne(new_user)
-            .then(result =>{
-                console.log('Inserted' + result.insertedCount)
+            .then(result =>{ 
                 return res.sendStatus(201);
             })
         }
@@ -67,17 +54,7 @@ app.post('/users', function(req,res){
         }
     })
 
-    // let email_user = UsersDAO.find(User => User.email === data.email);
-    // console.log("-----------------------")
-    // console.log(email_config)
-    // if (email_config === undefined){
-    //     let new_user = new User(data.name,data.surname,data.birthday,data.email,data.tel,data.username,data.password,data.education);
-    //     UsersDAO.insertOne(new_user);
-    //     return res.sendStatus(201);
-    // } else {
-    //     console.log(UsersDAO);
-    //     return res.sendStatus(400);
-    // }
+
 })
 
 
@@ -86,7 +63,7 @@ app.post('/users/search', function(req,res){
     let query = {email: String(data.email)}
     UsersDAO.find(query).toArray()
     .then(userList => {
-        if (userList === undefined || userList.lenght === undefined){
+        if (userList === undefined){
             return res.sendStatus(404);
         }
         else {
@@ -102,24 +79,18 @@ app.post('/users/search', function(req,res){
     })
 })
 
-app.post('/users/get', function(req,res){
-    let data = req.body;
+app.get('/users/:email', function(req,res){
+    let data = req.params.email;
     console.log(data);
-    let query = {email: String(data.email)}
+    let query = {email: String(data)}
     UsersDAO.find(query).toArray()
     .then(userList => {
-        if (userList === undefined || userList.lenght === undefined){
+        if (userList === undefined){
             return res.sendStatus(404);
         }
         else {
-            // searching if the password matches the user's email
-            let userExists = userList.find(({password}) => password === data.password)
-            if (userExists === undefined){
-                return res.sendStatus(400);
-            }
-            else {
-                res.send(userExists);
-            }
+            let userExists = userList[0];
+            res.send(userExists);
         }
     })
 })

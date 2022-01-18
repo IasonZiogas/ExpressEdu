@@ -14,7 +14,7 @@ function collapsableMenu(){
     let init ={
     method: "GET",
     headers: myHeaders
-}
+    }
 
     let template = document.querySelector("#course-categories-template").innerHTML;
     let compiled_template = Handlebars.compile(template);
@@ -90,18 +90,17 @@ async function loadProfile(){
 
     const data = {email: user_email, password:user_password}
 
-    let url = "http://localhost:8080/users/get"
+    let url = "http://localhost:8080/users/" + user_email
 
     let template = document.querySelector("#profile-details-template").innerHTML;
     let compiled_template = Handlebars.compile(template);
 
     let init ={
-        method:'POST',
+        method:'GET',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
-        body: JSON.stringify(data)
         };
 
     await fetch(url, init)
