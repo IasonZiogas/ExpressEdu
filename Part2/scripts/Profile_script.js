@@ -49,6 +49,7 @@ function collapsableMenu(){
           }
 }
 
+// Checking if the credentials are correct
 async function checkProfile(){
     let user_email = document.getElementById("user_email").value;
     let user_password = document.getElementById("user_password").value;
@@ -75,6 +76,7 @@ async function checkProfile(){
             window.alert("Wrong password...")
         }
          else if (response.status === 201){ 
+            //  If the credentials are correct get the profile's information 
              loadProfile()
         }
     })
@@ -83,12 +85,10 @@ async function checkProfile(){
     })
 }
 
+// Retrieving the information of the profile
 async function loadProfile(){
 
     let user_email = document.getElementById("user_email").value;
-    let user_password = document.getElementById("user_password").value;
-
-    const data = {email: user_email, password:user_password}
 
     let url = "http://localhost:8080/users/" + user_email
 

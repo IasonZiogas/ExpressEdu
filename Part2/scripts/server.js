@@ -1,4 +1,4 @@
-// Importing the client
+// Importing the client so to have access to the database
 const client = require ('./MongoDB');
 const express = require('express')
 const app = express()
@@ -13,6 +13,7 @@ app.use('/scripts', express.static('../scripts'));
 app.use('/style', express.static('../style'));
 
 
+// Creating a class user to sent the information to the database
 class User {
     constructor(name, surname, birthday, email, tel, username, password, education) {
       this.name = name;
@@ -36,6 +37,7 @@ client.connect()
   })
 
 
+//   Creeating a new user and adding him to the database
 app.post('/users', function(req,res){
     let data = req.body;
     let query = {email: data.email}
@@ -58,27 +60,32 @@ app.post('/users', function(req,res){
 })
 
 
+// Searching in the database if the credentials sent by the user are correct
 app.post('/users/search', function(req,res){
     let data = req.body;
     let query = {email: String(data.email)}
     UsersDAO.find(query).toArray()
     .then(userList => {
         if (userList === undefined){
+            // if user is not found sent appropriate message
             return res.sendStatus(404);
         }
         else {
             // searching if the password matches the user's email
             let userExists = userList.find(({password}) => password === data.password)
             if (userExists === undefined){
+                // if the password doesnt match sent appropriate message
                 return res.sendStatus(400);
             }
             else {
+                // Credentials are correct
                 return res.sendStatus(201) ;
             }
         }
     })
 })
 
+// Retrieving and sending the information of the users profile
 app.get('/users/:email', function(req,res){
     let data = req.params.email;
     console.log(data);
@@ -95,7 +102,7 @@ app.get('/users/:email', function(req,res){
     })
 })
 
-
+// Loading the front page to the user when he connects 
 app.get('/', function(req,res){
     res.sendFile('index.html');
 })
