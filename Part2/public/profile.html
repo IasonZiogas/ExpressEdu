@@ -53,7 +53,7 @@
     
         </header>
         <main>
-            <div class="course" id ="profile">
+            <div class="course" id="credentials-form">
                 <form class="form" id="signin-form"  onsubmit="checkProfile(); return false;">
                     <div class="search">
                         <h2>Sign In</h2>
@@ -76,18 +76,21 @@
                 </form>
             </div>
 
+            <div class="front_page_recommendation" id ="profile" hidden=true;>
+
+            </div>
+
             <!-- Script for desplaying profile info -->
             <script id="profile-details-template" type="text/x-handlebars-template">
                 <article class="course">
-                    <h2>
-                        {{name}} || {{surname}}
-                    </h2>
-                    <h5>
-                        {{email}} || {{birthday}} 
-                    </h5>
-                    <p> 
-                        {{username}} || {{education}}
-                    </p>
+                        <h2>Welcome back {{username}}!</h2>
+                        <h3>
+                            Firt name: {{name}} <br><br>  Last name : {{surname}}
+                        </h3>
+
+                        <h5>
+                           Email: {{email}} <br><br> Birthday: {{birthday}} <br><br> Username: {{username}} <br><br> Education : {{education}}
+                        </h5>
                 </article>
             </script>
         </main>

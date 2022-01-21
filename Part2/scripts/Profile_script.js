@@ -108,6 +108,8 @@ async function loadProfile(){
     .then(obj => {
             console.log('Received object', obj)
             profileDetails = obj;
+            document.getElementById("credentials-form").hidden = true;
+            document.getElementById("profile").hidden = false;
             let rendered = compiled_template(profileDetails);
             let  Profile = document.querySelector("#profile");
             Profile.innerHTML = rendered;

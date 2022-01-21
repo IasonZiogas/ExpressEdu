@@ -152,11 +152,17 @@ body {
   float:left;
 }
 
-.profile{
+/* designing the profile icon so it stays on the right side of the page*/
+.profile-icon{
   margin-left: auto;
   order: 2;
   margin-right:2em;
   margin-top:3em;
+}
+
+/* Designing the search button */
+#search_button{
+  float:right;
 }
 
 .avatar{
@@ -215,10 +221,6 @@ a:visited{
   color:purple;
 }
 
-/* adding margin around each "course" to create a visually pleasing result */
-.course{
-  margin:01em;
-}
 
 .category{
   margin:01em;
@@ -449,6 +451,7 @@ main .search {
   text-align: center;
   font-size:1.2em;
 }
+
 
 
 
