@@ -43,11 +43,10 @@ app.post('/users', function(req,res){
     let query = {email: data.email}
     UsersDAO.find(query).toArray()
     .then(userList => {
-        console.log(userList.lenght)
-        if (userList === undefined){
+        if (Object.keys(userList).length == 0 ){
             let new_user = new User(data.name,data.surname,data.birthday,data.email,data.tel,data.username,data.password,data.education);
             UsersDAO.insertOne(new_user)
-            .then(result =>{ 
+            .then(() =>{ 
                 return res.sendStatus(201);
             })
         }
@@ -66,7 +65,7 @@ app.post('/users/search', function(req,res){
     let query = {email: String(data.email)}
     UsersDAO.find(query).toArray()
     .then(userList => {
-        if (userList === undefined){
+        if (Object.keys(userList).length == 0 ){
             // if user is not found sent appropriate message
             return res.sendStatus(404);
         }
@@ -88,11 +87,10 @@ app.post('/users/search', function(req,res){
 // Retrieving and sending the information of the users profile
 app.get('/users/:email', function(req,res){
     let data = req.params.email;
-    console.log(data);
     let query = {email: String(data)}
     UsersDAO.find(query).toArray()
     .then(userList => {
-        if (userList === undefined){
+        if (Object.keys(userList).length == 0 ){
             return res.sendStatus(404);
         }
         else {
