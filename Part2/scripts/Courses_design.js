@@ -1,7 +1,7 @@
 
 window.onload=function(){
     document.getElementById("collapsible").addEventListener("click",collapsableMenu);
-    coursesFound();
+    coursesFoundbyCategory();
 }
 
 
@@ -51,7 +51,7 @@ function collapsableMenu(){
 }
 
 
-function coursesFound(){
+function coursesFoundbyCategory(){
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
     let url = "https://elearning-aueb.herokuapp.com/courses/search?category="+ params.category;

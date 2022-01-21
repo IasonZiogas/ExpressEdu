@@ -136,12 +136,14 @@
             {{#each courses}}
             <article class="course">
                 <h2>
-                    {{title}} || {{id}}
+                    {{title}} 
                 </h2>
+                <h4>
+                  CATEGORY : {{category}} || ID : {{id}} 
+                </h4>
                 <h5>
-                    {{category}} || {{objectives}} 
+                    {{objectives}} 
                 </h5>
-
                 <img class="course_image" src="https://elearning-aueb.herokuapp.com/static/images/{{img}}" alt="Course image" >
                 <p> 
                     {{description}}
