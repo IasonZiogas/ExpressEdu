@@ -1,8 +1,8 @@
 const MongoClient = require('mongodb').MongoClient;
 
-const username = 'Iason-Ziwgas'
-const password = 'ExpressEdu56'
-const host = 'cluster0.ngzpo.mongodb.net/ExpressEduDB'
+const username = ''
+const password = ''
+const host = ''
 
 
 
